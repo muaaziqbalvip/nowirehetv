@@ -12,7 +12,8 @@ cd "$ROOT"
 git config user.name "restream-bot"
 git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-for path in watch_list.json status.json README.md docs .state .github/workflows-manifest.json; do
+PATHS="${CI_COMMIT_PATHS:-watch_list.json status.json README.md docs .state .github/workflows-manifest.json}"
+for path in $PATHS; do
   [ -e "$path" ] && git add -A "$path"
 done
 

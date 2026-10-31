@@ -100,7 +100,7 @@ flowchart LR
 | **Panel reports online** | `101` |
 | **Average probe latency** | _pending first health check_ |
 | **Best bitrate** | _pending first health check_ |
-| **Catalog refreshed** | `2026-10-31T08:39:33Z` (35m ago) |
+| **Catalog refreshed** | `2026-10-31T08:39:33Z` (44m ago) |
 | **Portal URL** | [**muaaziqbalvip.github.io/nowirehetv/docs**](https://muaaziqbalvip.github.io/nowirehetv/docs) |
 | **Relay (https layer)** | _not configured - direct links are plain HTTP_ |
 
@@ -179,7 +179,18 @@ it is stored in `localStorage` and rewrites links instantly, no rebuild needed.
 The token lives in KV (auto-refreshed on a 403 and cached for an hour), never in the page.
 </details>
 
-### 5. (Optional) Turn on 24/7 restream
+### 5. Start the per-channel jobs
+
+`Actions → ch-<id>-<slug> → Run workflow` starts one channel, or use the
+**_kick** workflow: put `be7u` (single), `online` (all 101 panel-online channels) or
+`all` (170) in the `channels` box. Locally: `bash scripts/kick.sh be7u`.
+
+Each job pulls the channel for up to 355 minutes, restarts ffmpeg with backoff,
+re-reads the token every 30 minutes and hands over to the next scheduled run.
+GitHub runs ~20 jobs at once on the free plan, so a 170-channel kick is a queue,
+not a simultaneous fan-out - that is a GitHub limit, not a bug here.
+
+### 6. (Optional) Turn on a real restream destination
 
 Set `mode` and `dest_mode` in `config.json`, then regenerate:
 
@@ -192,7 +203,7 @@ git add .github && git commit -m "chore: regenerate restream workflows" && git p
 | --- | --- | --- |
 | `portal-only` *(default)* | Writes the per-channel workflows **inert** into `.github/workflows.disabled/`. Only the 6-hourly bots run. | ~0 (few seconds per run) |
 | `github-free` | Dispatch-only per-channel workflows + a rotating matrix that streams N channels per 6-hour slot and walks the whole catalog. Fits the 2,000 min/month budget. | ≈ 2,000 min |
-| `github-hosted` *(current)* | **One active 24/7 workflow per channel** on `ubuntu-latest`: cron every 6 h, manual run, `repository_dispatch` and a per-channel push kick (`data/trigger/<id>`). Restart loop + 355-minute handover. | free for public repos, but GitHub allows only ~20 concurrent jobs, so 170 channels take turns in the queue |
+| `github-hosted` *(current)* | **One active 24/7 workflow per channel** on `ubuntu-latest`: cron every 6 h, manual run, `repository_dispatch` and a a `_kick` workflow that dispatches any channel. Restart loop + 355-minute handover. | free for public repos, but GitHub allows only ~20 concurrent jobs, so 170 channels take turns in the queue |
 | `selfhosted` | One cron workflow per channel on `[self-hosted, linux]`, staggered starts, 355-minute jobs that hand over seamlessly. | free on your own runner, **all 170 channels truly simultaneous** |
 
 | `dest_mode` | Behaviour |
@@ -230,7 +241,7 @@ scripts/
 templates/                   HTML/CSS/JS used by build_site.py
 docs/                        the generated GitHub Pages site (committed)
 tests/                       pytest/unittest suite
-.github/workflows/           _token-refresh, _status-check, _site-build, _worker-deploy, matrix rotation
+.github/workflows/           _token-refresh, _status-check, _site-build, _kick, _panel-probe, _worker-deploy, ch-*.yml, matrix rotation
 .github/workflows.disabled/  generated per-channel streaming workflows - inert until you switch mode
 ```
 
@@ -284,7 +295,7 @@ https://relay.example.workers.dev/live/be7u.m3u8
 | Symptom | Fix |
 | --- | --- |
 | Portal shows "HTTPS relay not configured" | Deploy the Worker and set `proxy.base_url` (or paste the URL into a channel page). Direct panel links are plain HTTP and blocked by browsers on HTTPS. |
-| Per-channel workflows are not running | They only exist when `mode` is `github-hosted`/`selfhosted`; run `python3 scripts/generate_workflows.py`. To start one right now without the API: `bash scripts/kick.sh be7u`. |
+| Per-channel workflows are not running | They exist when `mode` is `github-hosted`/`selfhosted`; run `python3 scripts/generate_workflows.py`. To start them now: Actions → **_kick** → channels `be7u` (or `online`, `all`), or locally `bash scripts/kick.sh be7u`. |
 | Player spinner then "Network error" | Token rotated mid-session or channel is offline. Re-run `_status-check`; the playlist is rebuilt on every bot run. |
 | `403 Invalid token` in Actions logs | The loop refreshes automatically; if it persists, the panel changed its token format → update `auth.token_field`. |
 | `watch_list.json` marked `stale: true` | Panel was unreachable during refresh. The bot keeps the last good catalog and retries next run; nothing breaks. |

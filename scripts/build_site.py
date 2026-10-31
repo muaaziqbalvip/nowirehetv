@@ -103,7 +103,7 @@ def state_badge(state: str, online: bool) -> str:
 def build_notice(cfg: dict, watch: dict, status: dict) -> str:
     parts: list[str] = []
     base = proxy_base(cfg)
-    if not TOKEN_FILE.exists() and not base:
+    if not watch.get("token_present") and not base:
         parts.append(
             '<div class="notice"><span>&#9888;</span><div>'
             "<strong>No live token yet.</strong> The links below use the bootstrap token from "
