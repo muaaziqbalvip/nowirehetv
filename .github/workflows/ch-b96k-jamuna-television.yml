@@ -68,3 +68,10 @@ jobs:
         if: always()
         continue-on-error: true
         run: bash scripts/heartbeat.sh "b96k" "finished"
+
+      - name: Commit heartbeat
+        if: always()
+        continue-on-error: true
+        env:
+          CI_COMMIT_PATHS: ".state"
+        run: bash scripts/ci_commit.sh "chore(beat): b96k"

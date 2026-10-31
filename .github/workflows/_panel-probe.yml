@@ -1,0 +1,91 @@
+# ==============================================================================
+# Panel reachability probe - answers the only question that matters when a
+# stream "does not play": can this runner talk to the panel at all?
+# Runs on demand, when data/trigger/probe is pushed, and once a day.
+# ==============================================================================
+name: _panel-probe
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "data/trigger/probe"
+  schedule:
+    - cron: "29 3 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Read config
+        id: cfg
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os
+          cfg = json.load(open("config.json"))
+          print("base=" + cfg["source_base"])
+          print("list=" + cfg["list_path"])
+          print("template=" + cfg["play_url_template"])
+          PY
+
+      - name: TCP + HTTP check against the panel
+        env:
+          BASE: ${{ steps.cfg.outputs.base }}
+          LIST: ${{ steps.cfg.outputs.list }}
+        run: |
+          host=$(python3 -c "import sys,urllib.parse as u;print(u.urlparse('$BASE').hostname)")
+          port=$(python3 -c "import sys,urllib.parse as u;print(u.urlparse('$BASE').port or 80)")
+          echo "### Panel probe" >> "$GITHUB_STEP_SUMMARY"
+          echo "| check | result |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| --- | --- |" >> "$GITHUB_STEP_SUMMARY"
+          if timeout 10 bash -c "</dev/tcp/$host/$port" 2>/dev/null; then
+            echo "| TCP $host:$port | open |" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "| TCP $host:$port | **closed / blocked** |" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          code=$(curl -sS -o /tmp/list.json -w "%{http_code}" -m 25 -A "VLC/3.0.20" "$BASE$LIST" || echo "000")
+          echo "| GET $LIST | HTTP $code |" >> "$GITHUB_STEP_SUMMARY"
+          echo "http_code=$code"
+          head -c 300 /tmp/list.json || true
+          python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          try:
+              data = json.load(open("/tmp/list.json"))
+              print(f"| panel | {data.get('name')} v{data.get('version')} |")
+              print(f"| channels | {len(data.get('channels', []))} |")
+              print(f"| token | {'present' if data.get('token') else 'missing'} |")
+          except Exception as exc:
+              print(f"| json | not parseable: {exc} |")
+          PY
+
+      - name: Probe one real stream
+        env:
+          BASE: ${{ steps.cfg.outputs.base }}
+          TEMPLATE: ${{ steps.cfg.outputs.template }}
+        run: |
+          python3 - <<'PY'
+          import json, os, subprocess, urllib.parse, urllib.request
+          base, tpl = os.environ["BASE"].rstrip("/"), os.environ["TEMPLATE"]
+          data = json.load(open("/tmp/list.json"))
+          token = data.get("token", "")
+          online = [c for c in data.get("channels", []) if c.get("online")]
+          ch = (online or data.get("channels") or [{"id": "be7u"}])[0]
+          url = base + "/" + tpl.replace("<ID>", ch["id"]).replace("<TOKEN>", token).lstrip("/")
+          print(f"probing {ch['name']} ({ch['id']})")
+          try:
+              req = urllib.request.Request(url, headers={"User-Agent": "VLC/3.0.20"})
+              with urllib.request.urlopen(req, timeout=20) as resp:
+                  body = resp.read(400).decode("utf-8", "replace")
+                  print(f"HTTP {resp.status}\n{body[:200]}")
+          except Exception as exc:
+              print(f"FAILED: {exc}")
+          PY
