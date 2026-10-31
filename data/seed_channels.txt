@@ -1,0 +1,174 @@
+// Seed catalog captured from GET /watch/list on 2026-10-31 (EasyISP24 Stream v1.0.59).
+// Format: <channel_id>|<display name>|<online|offline>
+// This file is only used to bootstrap watch_list.json. The token-refresh bot
+// overwrites watch_list.json from the live panel (groups + logos included).
+b2xt|Unite8 SD1|offline
+bdfw|FIFA 2026 Unite8 2 SD|offline
+bq5a|PTV-SPORTS-HD|offline
+boe4|Enterr10 Bangla|offline
+bob4|Bein Sport 1|offline
+bui7|Bein Sport 2|offline
+bz8n|Sony Sports  Ten 1|offline
+bbym|Sony Sports 2|offline
+bz7z|Al Jazeera|offline
+bzmd|CNN|offline
+b37l|HBO HD|offline
+bs0g|SRK TV|offline
+bfxw|Ten Cricket|offline
+bifa|WWE 24*7|offline
+bw05|BBC World|offline
+buvm|ThePapare 1|offline
+bksz|ThePapare 2|offline
+beu7|Star Plus|offline
+bmm9|Bein Xtra|offline
+bo00|Hum Sitary|offline
+bqj2|Star Sports 2 DL|offline
+brfa|Star Jalsha|offline
+bj4m|History 18|offline
+bcp0|Cartoon Network|offline
+b7a8|Zee Bangla E|offline
+bwx6|Zee Cinema HD|offline
+bwnh|Disney Jr|offline
+buon|Nickelodeon|offline
+bpbb|Disney International|offline
+bse9|Pogo|offline
+bae0|Eurosport|offline
+bvv5|Sun Bangla HD|offline
+b38z|UDP 228.2.2.2:1053 #1907|offline
+b96j|Travelxp HD|offline
+b22h|TEN 3|offline
+b84n|Zee TV|offline
+bfc4|Star Gold 2 HD|offline
+bvfo|UDP 228.2.2.2:1062 #2111|offline
+bo7a|UDP 228.2.2.2:1064 #2811|offline
+bbei|Zee Cinema HD|offline
+b5js|SKYNET SPORTS|offline
+b77z|Star Sports Select 1 HD|offline
+bi9k|Star Sports Select 2 HD|offline
+b1au|TEN 5 HD|offline
+bd1k|KSA Sport 1|offline
+bjc1|Animal Planet|offline
+bpfk|UDP 228.2.2.2:1077 #3219|offline
+b9v0|HITS MOVIES|offline
+bt92|SUPER HIT|offline
+b5wa|Hits|offline
+bi64|ENC 2406|offline
+bmoe|Nat Geo Wild HD|offline
+bxyc|Nick|offline
+b18x|Sony SET HD|offline
+bzjz|UDP 228.2.2.2:1087 #2813|offline
+bvjv|UDP 228.2.2.2:1088 #2812|offline
+bdwg|STAR Plus HD|offline
+b0wm|BANGLA CINEMA|offline
+bebi|Ruposhi Bangla|offline
+bliq|Colors Bangla HD|offline
+bcaa|Zee Bangla HD|offline
+b837|UDP 228.2.2.2:1094 #2817|offline
+bzwf|Jalsha Movies HD|offline
+b801|Colors HD|offline
+bnjd|Colors Infinity HD|offline
+bwki|Sony Aath|offline
+b3yb|Movies Now HD|offline
+b1pj|UDP 228.2.2.2:1103 #2113|offline
+b3j8|Star Bangla|offline
+bv6p|SA TV HD|online
+bkyl|asiantvHD|online
+b511|BijoyTV|online
+b3s7|Boishakhi TV|online
+b521|Rtv HD|online
+bol1|SANGSAD TV HD|online
+bedv|NEXUS TV|online
+bee4|Channel 24HD|online
+b8vx|EKHON TV|online
+bxlf|GLOBAL TV HD|online
+bx72|Madani TV|online
+brzr|ATN Bangla|online
+b5jz|BanglaTV HD|online
+bcb3|Bangla Vision|online
+bmbq|Channel I HD|online
+bgxr|Ekattor TV HD|online
+beed|DBC NEWS|online
+bo3s|NEWS24HD|online
+bw0r|Desh TV|online
+bgj6|Mohona TV|online
+b1xm|Ananda TV|online
+bv5s|Ekushey TV|online
+b96k|Jamuna Television|online
+b3fg|MYTV HD|online
+ber7|Channel S|online
+bhb3|NTV HD EN-1|online
+bsmy|ATN News|online
+bamp|BTV Chattagram|online
+brwl|BTV HD|online
+bex9|BTV NEWS HD|online
+bsy8|0001_TSPORTS|online
+bkra|UDP 228.2.2.2:1053 #1907|online
+bhm5|Unite8 SD1|online
+bemd|FIFA 2026 Unite8 2 SD|online
+bo87|PTV-SPORTS-HD|online
+bxqa|Enterr10 Bangla|online
+bo91|Bein Sport 1|online
+bl9s|Bein Sport 2|online
+b7cm|Sony Sports  Ten 1|online
+bn59|Sony Sports 2|online
+bjdd|Al Jazeera|online
+byhp|CNN|online
+bc4f|HBO HD|online
+blp5|SRK TV|online
+bqxt|Ten Cricket|online
+boan|WWE 24*7|online
+bw10|BBC World|online
+bvm6|ThePapare 1|online
+bqg4|ThePapare 2|online
+be7u|Star Plus|online
+bry1|Bein Xtra|online
+b9zj|Hum Sitary|online
+bdvl|Star Sports 2 DL|online
+bxvd|Star Jalsha|online
+boee|History 18|online
+b7np|Cartoon Network|online
+bl29|Zee Bangla E|online
+bo14|Zee Cinema HD|online
+bdqh|Disney Jr|online
+bu0e|Nickelodeon|online
+bbxp|Disney International|online
+bz5z|Pogo|online
+bqfr|Eurosport|online
+b539|Sun Bangla HD|online
+befz|Travelxp HD|online
+bwon|TEN 3|online
+bd11|Zee TV|online
+be8c|Star Gold 2 HD|online
+b4q7|Eurosport HD|online
+brme|UDP 228.2.2.2:1062 #2111|online
+baeg|UDP 228.2.2.2:1064 #2811|online
+bm3w|SKYNET SPORTS|online
+bo3x|Star Sports Select 1 HD|online
+bcfe|Star Sports Select 2 HD|online
+b3b2|TEN 5 HD|online
+bt59|KSA Sport 1|online
+bups|Animal Planet|online
+bw3c|Discovery HD|online
+b49e|Discovery Science|online
+bxqx|HITS MOVIES|online
+bgqc|SUPER HIT|online
+bw4t|Hits|online
+bonc|ENC 2406|online
+b668|Nat Geo Wild HD|online
+b010|Nick|online
+bvgy|Sony SET HD|online
+bbtz|UDP 228.2.2.2:1087 #2813|online
+bpwx|UDP 228.2.2.2:1088 #2812|online
+b8d3|STAR Plus HD|online
+bzag|BANGLA CINEMA|online
+b5wy|Ruposhi Bangla|online
+b0v8|Colors Bangla HD|online
+byix|Zee Bangla HD|online
+b4au|UDP 228.2.2.2:1094 #2817|online
+bt4k|Jalsha Movies HD|online
+bkys|Colors HD|online
+b1y7|Colors Infinity HD|online
+brft|Sony Aath|online
+bl8q|Movies Now HD|online
+btpa|UDP 228.2.2.2:1103 #2113|online
+biy1|Star Bangla|online

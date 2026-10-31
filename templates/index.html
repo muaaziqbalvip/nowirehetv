@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="midnight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}} - live channels</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap site-inner">
+    <a class="brand" href="index.html">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#041016" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5a15 15 0 0 1 20 0"/><path d="M5.5 12.5a10 10 0 0 1 13 0"/><path d="M9 16.5a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r="1.3" fill="#041016"/></svg>
+      </span>
+      <span>{{SHORT_TITLE}}<span style="color:var(--brand)">.</span>live</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Channels</a>
+      <a href="playlist.m3u">Full M3U</a>
+      <a href="data/channels.json">JSON</a>
+      <a href="{{README_URL}}">README</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="eyebrow"><span class="dot on"></span> auto-refreshed every 6 hours</span>
+    <h1 class="hero-title"><span class="gradient-text">{{TITLE}}</span><br>live, 24/7, straight from Actions.</h1>
+    <p class="lede"><strong>{{TAGLINE}}</strong> Every channel below is token-refreshed by a GitHub Actions bot, health-checked, and published as a clean M3U plus a browser player.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="value" data-count="{{STAT_TOTAL}}">0</div><div class="label">Channels</div></div>
+      <div class="stat live"><div class="value" data-count="{{STAT_OK}}">0</div><div class="label">Streaming now</div></div>
+      <div class="stat dead"><div class="value" data-count="{{STAT_DEAD}}">0</div><div class="label">Offline / dead</div></div>
+      <div class="stat"><div class="value"><span data-count="{{STAT_LATENCY}}">0</span><small style="font-size:.9rem"> ms</small></div><div class="label">Avg probe latency</div></div>
+      <div class="stat"><div class="value"><span data-count="{{STAT_BITRATE}}">0</span><small style="font-size:.9rem"> kbps</small></div><div class="label">Top bitrate</div></div>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">{{TICKER_ITEMS}}</div>
+    </div>
+  </section>
+
+  {{NOTICE}}
+
+  <section class="toolbar" id="channels">
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search {{STAT_TOTAL}} channels - name, id or group..." autocomplete="off" aria-label="Search channels">
+    </div>
+    <div class="chips" role="group" aria-label="Filter by state">
+      <button class="chip" data-filter-state="all" aria-pressed="true">All</button>
+      <button class="chip" data-filter-state="live" aria-pressed="false">Live</button>
+      <button class="chip" data-filter-state="offline" aria-pressed="false">Offline</button>
+      <button class="chip" data-filter-state="panel" aria-pressed="false">Panel says online</button>
+    </div>
+    <select class="group-select" id="group" aria-label="Filter by group">
+      <option value="">All groups</option>
+      {{GROUP_OPTIONS}}
+    </select>
+  </section>
+
+  <div class="count-line">
+    <span>Showing <b id="visible-count">{{STAT_TOTAL}}</b> of {{STAT_TOTAL}} channels</span>
+    <span class="mono">updated {{UPDATED_HUMAN}}</span>
+  </div>
+
+  <div class="grid" id="channel-grid">
+    {{CARDS}}
+    <div class="empty" id="empty-state" style="display:none">
+      <strong>No channel matches this filter.</strong><br>
+      Try another search term, or clear the group filter.
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap footer-grid">
+    <div style="max-width:52ch">
+      <strong style="color:var(--text)">{{TITLE}}</strong><br>
+      {{FOOTER_NOTE}}<br>
+      Source catalog: <span class="mono">{{SOURCE_LABEL}}</span>
+    </div>
+    <div>
+      <a href="playlist.m3u">playlist.m3u</a> &middot;
+      <a href="data/channels.json">channels.json</a> &middot;
+      <a href="status.json">status.json</a> &middot;
+      <a href="watch_list.json">watch_list.json</a><br>
+      Built {{UPDATED_AT}} by <span class="mono">scripts/build_site.py</span>
+    </div>
+  </div>
+</footer>
+
+<script id="site-config" type="application/json">{{CONFIG_JSON}}</script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="midnight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Desh TV - EasyISP24 Restream</title>
+<meta name="description" content="Watch Desh TV live - HLS player, M3U playlist and direct stream link.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap site-inner">
+    <a class="brand" href="../index.html">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#041016" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5a15 15 0 0 1 20 0"/><path d="M5.5 12.5a10 10 0 0 1 13 0"/><path d="M9 16.5a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r="1.3" fill="#041016"/></svg>
+      </span>
+      <span>EasyISP24<span style="color:var(--brand)">.</span>live</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html">&larr; All channels</a>
+      <a href="../playlist/bw0r.m3u">M3U</a>
+      <a href="https://github.com/muaaziqbalvip/nowirehetv#readme">README</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="player-shell">
+    <section>
+      <div style="display:flex;align-items:center;gap:12px;margin:22px 0 14px;flex-wrap:wrap">
+        <div class="avatar" aria-hidden="true">DT</div>
+        <div>
+          <h1 style="margin:0;font-size:1.5rem;letter-spacing:-.03em">Desh TV</h1>
+          <div class="card-sub">bw0r &middot; News &middot; EasyISP24 Stream v1.0.59</div>
+        </div>
+        <div class="card-meta" style="margin-left:auto"><span class="badge live"><span class="dot on"></span>Live</span><span class="badge brand">panel: online</span></div>
+      </div>
+
+      <div class="stage" id="stage">
+        <video id="video" controls playsinline poster="" crossorigin="anonymous"></video>
+        <div class="idle" id="idle">
+          <div>
+            <strong>Ready to play Desh TV</strong>
+            <span id="idle-note">Press play - the player will attach to the HLS stream automatically.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="player-bar">
+        <button class="btn primary" id="play-btn" type="button" style="flex:0 0 auto">&#9654; Play stream</button>
+        <button class="btn" id="reload-btn" type="button" style="flex:0 0 auto">&#8635; Reload</button>
+        <label class="btn ghost" style="gap:8px;flex:1 1 180px">
+          <span style="opacity:.7">Quality</span>
+          <select id="quality" class="group-select" style="border:0;background:transparent;padding:0 4px" aria-label="Quality">
+            <option value="-1">Auto</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="link-box">
+        <input id="stream-url" readonly value="http://103.151.60.162:2122/play/bw0r/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8" aria-label="Stream URL">
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bw0r" title="Copy stream URL">&#10697; Copy</button>
+        <a class="btn ghost" href="http://103.151.60.162:2122/play/bw0r/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8" target="_blank" rel="noopener" title="Open the raw playlist">Raw</a>
+      </div>
+
+      <p class="mono" style="color:var(--muted);margin-top:10px">No relay configured: the stream URL above is the panel URL itself. Paste it into VLC, mpv, TiviMate or OTT Navigator.</p>
+
+      <p class="mono" style="color:var(--muted);margin-top:14px">
+        Tip: paste the URL into VLC, mpv, TiviMate, OTT Navigator or any IPTV player.
+      </p>
+    </section>
+
+    <aside>
+      <div class="panel">
+        <h2>Channel status</h2>
+        <div class="kv"><span>State</span><span>Live</span></div>
+        <div class="kv"><span>HTTP</span><span>-</span></div>
+        <div class="kv"><span>Latency</span><span>-</span></div>
+        <div class="kv"><span>Bitrate</span><span>-</span></div>
+        <div class="kv"><span>Variants</span><span>-</span></div>
+        <div class="kv"><span>Segments</span><span>-</span></div>
+        <div class="kv"><span>Checked</span><span>unknown</span></div>
+      </div>
+
+      <div class="panel">
+        <h2>Playlists</h2>
+        <div class="kv"><span>Single channel</span><a href="../playlist/bw0r.m3u">playlist/bw0r.m3u</a></div>
+        <div class="kv"><span>All channels</span><a href="../playlist.m3u">playlist.m3u</a></div>
+        <div class="kv"><span>Machine JSON</span><a href="../data/channels.json">channels.json</a></div>
+      </div>
+
+      <div class="panel">
+        <h2>HTTPS relay</h2>
+        <p style="color:var(--muted);font-size:.8rem;line-height:1.6;margin:0 0 10px">
+          Browsers block plain-HTTP streams on an HTTPS page. Deploy the bundled
+          Cloudflare Worker, then paste its URL here - links rewrite instantly (saved in this browser).
+        </p>
+        <div class="search" style="margin-bottom:8px">
+          <input id="proxy-base" type="url" placeholder="https://your-worker.workers.dev" aria-label="Relay base URL">
+        </div>
+        <div style="display:flex;gap:8px">
+          <a class="btn" href="https://github.com/muaaziqbalvip/nowirehetv#readme" target="_blank" rel="noopener">Deploy guide</a>
+          <button class="btn ghost" id="proxy-clear" type="button">Clear</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    EasyISP24 Restream &middot; built 2026-10-31T08:39:33Z &middot; unofficial portal, authorised use only
+  </div>
+</footer>
+
+<script id="site-config" type="application/json">{"proxy":"","channels":[{"id":"bw0r","name":"Desh TV","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bw0r/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"}]}</script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js"></script>
+<script src="../assets/site.js" defer></script>
+<script>
+(function () {
+  "use strict";
+  var video = document.getElementById("video");
+  var idle = document.getElementById("idle");
+  var idleNote = document.getElementById("idle-note");
+  var playBtn = document.getElementById("play-btn");
+  var reloadBtn = document.getElementById("reload-btn");
+  var quality = document.getElementById("quality");
+  var stage = document.getElementById("stage");
+  var hls = null;
+
+  function currentUrl() {
+    var base = window.EasyISP ? window.EasyISP.proxyBase() : "";
+    if (base) return base + "/live/bw0r.m3u8";
+    return "http://103.151.60.162:2122/play/bw0r/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8";
+  }
+
+  function showMessage(title, detail) {
+    idle.innerHTML = '<div><strong>' + title + '</strong><span>' + detail + '</span></div>';
+    idle.style.display = "";
+  }
+
+  function attach() {
+    var url = currentUrl();
+    document.getElementById("stream-url").value = url;
+    if (!window.Hls || !Hls.isSupported()) {
+      if (video.canPlayType("application/vnd.apple.mpegurl")) {
+        video.src = url;
+      } else {
+        showMessage("HLS is not supported in this browser", "Use Safari, or copy the URL into VLC.");
+        return;
+      }
+    } else {
+      if (hls) { hls.destroy(); }
+      hls = new Hls({ lowLatencyMode: true, backBufferLength: 60, manifestLoadingTimeOut: 20000 });
+      hls.loadSource(url);
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, function (_, data) {
+        quality.innerHTML = '<option value="-1">Auto</option>';
+        (data.levels || []).forEach(function (level, index) {
+          var label = level.height ? level.height + "p" : Math.round(level.bitrate / 1000) + "k";
+          var opt = document.createElement("option");
+          opt.value = String(index);
+          opt.textContent = label + " (" + Math.round(level.bitrate / 1000) + " kbps)";
+          quality.appendChild(opt);
+        });
+        idle.style.display = "none";
+        play();
+      });
+      hls.on(Hls.Events.ERROR, function (_, data) {
+        if (!data.fatal) return;
+        if (data.type === Hls.ErrorTypes.NETWORK_ERROR) {
+          showMessage("Network error while loading the stream",
+            "The panel may be offline, the token may have rotated, or the browser blocked the plain-HTTP source. Deploy the HTTPS relay to fix playback on this page.");
+          setTimeout(function () { try { hls.startLoad(); } catch (e) {} }, 4000);
+        } else if (data.type === Hls.ErrorTypes.MEDIA_ERROR) {
+          try { hls.recoverMediaError(); } catch (e) {}
+        } else {
+          showMessage("Playback stopped", "Press Reload to reconnect.");
+        }
+      });
+    }
+    video.play().catch(function () { /* autoplay blocked - the Play button is there */ });
+  }
+
+  function play() {
+    idle.style.display = "none";
+    video.play().catch(function () {
+      showMessage("Autoplay blocked", "Press the Play button to start.");
+    });
+  }
+
+  quality.addEventListener("change", function () {
+    if (hls) hls.currentLevel = parseInt(quality.value, 10);
+  });
+
+  playBtn.addEventListener("click", function () {
+    if (!hls && !video.src) attach(); else play();
+  });
+
+  reloadBtn.addEventListener("click", function () {
+    stage.querySelector("video").load();
+    attach();
+  });
+
+  function boot() {
+    if (location.protocol === "https:" && currentUrl().indexOf("http://") === 0) {
+      showMessage("This stream is plain HTTP",
+        "Mixed content is blocked on HTTPS pages. VLC/ffmpeg can still play it; deploy the Cloudflare relay for browser playback, then paste the relay URL on the right.");
+    } else {
+      attach();
+    }
+  }
+
+  // site.js is deferred: wait for it so the saved relay URL is applied first
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+</body>
+</html>

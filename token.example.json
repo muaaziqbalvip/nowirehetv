@@ -1,0 +1,7 @@
+{
+  "_note": "Copy to token.json if you want to run the pipeline locally without hitting /watch/list. token.json is gitignored - never commit a real token.",
+  "token": "w.1793478329.mkkNkz93oHpmAmUESwlnG8",
+  "expires": 1793478329,
+  "fetched_at": "2026-10-31T00:00:00Z",
+  "source": "http://103.151.60.162:2122"
+}
