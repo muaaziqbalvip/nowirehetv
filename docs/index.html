@@ -1,0 +1,2662 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="midnight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EasyISP24 Restream - live channels</title>
+<meta name="description" content="Auto-refreshing live TV portal: 170 channels, token-aware playlists, health badges and browser players.">
+<meta property="og:title" content="EasyISP24 Restream">
+<meta property="og:description" content="Auto-refreshing live TV portal: 170 channels, token-aware playlists, health badges and browser players.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap site-inner">
+    <a class="brand" href="index.html">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#041016" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5a15 15 0 0 1 20 0"/><path d="M5.5 12.5a10 10 0 0 1 13 0"/><path d="M9 16.5a5 5 0 0 1 6 0"/><circle cx="12" cy="20" r="1.3" fill="#041016"/></svg>
+      </span>
+      <span>EasyISP24<span style="color:var(--brand)">.</span>live</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Channels</a>
+      <a href="playlist.m3u">Full M3U</a>
+      <a href="data/channels.json">JSON</a>
+      <a href="https://github.com/muaaziqbalvip/nowirehetv#readme">README</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="eyebrow"><span class="dot on"></span> auto-refreshed every 6 hours</span>
+    <h1 class="hero-title"><span class="gradient-text">EasyISP24 Restream</span><br>live, 24/7, straight from Actions.</h1>
+    <p class="lede"><strong>24/7 Live TV - GitHub Actions restream portal</strong> Every channel below is token-refreshed by a GitHub Actions bot, health-checked, and published as a clean M3U plus a browser player.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="value" data-count="170">0</div><div class="label">Channels</div></div>
+      <div class="stat live"><div class="value" data-count="101">0</div><div class="label">Streaming now</div></div>
+      <div class="stat dead"><div class="value" data-count="69">0</div><div class="label">Offline / dead</div></div>
+      <div class="stat"><div class="value"><span data-count="0">0</span><small style="font-size:.9rem"> ms</small></div><div class="label">Avg probe latency</div></div>
+      <div class="stat"><div class="value"><span data-count="0">0</span><small style="font-size:.9rem"> kbps</small></div><div class="label">Top bitrate</div></div>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track"><span class="ticker-item"><span class="dot on"></span><b>asiantvHD</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Bangla Vision</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>BanglaTV HD</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>BijoyTV</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>BTV Chattagram</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>BTV HD</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Channel I HD</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Colors Bangla HD</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Enterr10 Bangla</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Madani TV</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>NTV HD EN-1</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Ruposhi Bangla</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>SA TV HD</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Sony Aath</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Star Bangla</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Star Jalsha</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Sun Bangla HD</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Zee Bangla E</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Zee Bangla HD</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Colors HD</b> Entertainment</span><span class="ticker-item"><span class="dot on"></span><b>Colors Infinity HD</b> Entertainment</span><span class="ticker-item"><span class="dot on"></span><b>Hum Sitary</b> Entertainment</span><span class="ticker-item"><span class="dot on"></span><b>Sony SET HD</b> Entertainment</span><span class="ticker-item"><span class="dot on"></span><b>SRK TV</b> Entertainment</span><span class="ticker-item"><span class="dot on"></span><b>Star Plus</b> Entertainment</span><span class="ticker-item"><span class="dot on"></span><b>STAR Plus HD</b> Entertainment</span><span class="ticker-item"><span class="dot on"></span><b>Zee TV</b> Entertainment</span><span class="ticker-item"><span class="dot on"></span><b>Animal Planet</b> Infotainment</span><span class="ticker-item"><span class="dot on"></span><b>Discovery HD</b> Infotainment</span><span class="ticker-item"><span class="dot on"></span><b>Discovery Science</b> Infotainment</span><span class="ticker-item"><span class="dot on"></span><b>History 18</b> Infotainment</span><span class="ticker-item"><span class="dot on"></span><b>Nat Geo Wild HD</b> Infotainment</span><span class="ticker-item"><span class="dot on"></span><b>Travelxp HD</b> Infotainment</span><span class="ticker-item"><span class="dot on"></span><b>Cartoon Network</b> Kids</span><span class="ticker-item"><span class="dot on"></span><b>Disney International</b> Kids</span><span class="ticker-item"><span class="dot on"></span><b>Disney Jr</b> Kids</span><span class="ticker-item"><span class="dot on"></span><b>Nick</b> Kids</span><span class="ticker-item"><span class="dot on"></span><b>Nickelodeon</b> Kids</span><span class="ticker-item"><span class="dot on"></span><b>Pogo</b> Kids</span><span class="ticker-item"><span class="dot on"></span><b>BANGLA CINEMA</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>ENC 2406</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>HBO HD</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>Hits</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>HITS MOVIES</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>Jalsha Movies HD</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>Movies Now HD</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>Star Gold 2 HD</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>SUPER HIT</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>Zee Cinema HD</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>Al Jazeera</b> News</span><span class="ticker-item"><span class="dot on"></span><b>Ananda TV</b> News</span><span class="ticker-item"><span class="dot on"></span><b>ATN Bangla</b> News</span><span class="ticker-item"><span class="dot on"></span><b>ATN News</b> News</span><span class="ticker-item"><span class="dot on"></span><b>BBC World</b> News</span><span class="ticker-item"><span class="dot on"></span><b>Boishakhi TV</b> News</span><span class="ticker-item"><span class="dot on"></span><b>BTV NEWS HD</b> News</span><span class="ticker-item"><span class="dot on"></span><b>Channel 24HD</b> News</span><span class="ticker-item"><span class="dot on"></span><b>Channel S</b> News</span><span class="ticker-item"><span class="dot on"></span><b>CNN</b> News</span><span class="ticker-item"><span class="dot on"></span><b>DBC NEWS</b> News</span><span class="ticker-item"><span class="dot on"></span><b>asiantvHD</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Bangla Vision</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>BanglaTV HD</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>BijoyTV</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>BTV Chattagram</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>BTV HD</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Channel I HD</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Colors Bangla HD</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Enterr10 Bangla</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Madani TV</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>NTV HD EN-1</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Ruposhi Bangla</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>SA TV HD</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Sony Aath</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Star Bangla</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Star Jalsha</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Sun Bangla HD</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Zee Bangla E</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Zee Bangla HD</b> Bangla</span><span class="ticker-item"><span class="dot on"></span><b>Colors HD</b> Entertainment</span><span class="ticker-item"><span class="dot on"></span><b>Colors Infinity HD</b> Entertainment</span><span class="ticker-item"><span class="dot on"></span><b>Hum Sitary</b> Entertainment</span><span class="ticker-item"><span class="dot on"></span><b>Sony SET HD</b> Entertainment</span><span class="ticker-item"><span class="dot on"></span><b>SRK TV</b> Entertainment</span><span class="ticker-item"><span class="dot on"></span><b>Star Plus</b> Entertainment</span><span class="ticker-item"><span class="dot on"></span><b>STAR Plus HD</b> Entertainment</span><span class="ticker-item"><span class="dot on"></span><b>Zee TV</b> Entertainment</span><span class="ticker-item"><span class="dot on"></span><b>Animal Planet</b> Infotainment</span><span class="ticker-item"><span class="dot on"></span><b>Discovery HD</b> Infotainment</span><span class="ticker-item"><span class="dot on"></span><b>Discovery Science</b> Infotainment</span><span class="ticker-item"><span class="dot on"></span><b>History 18</b> Infotainment</span><span class="ticker-item"><span class="dot on"></span><b>Nat Geo Wild HD</b> Infotainment</span><span class="ticker-item"><span class="dot on"></span><b>Travelxp HD</b> Infotainment</span><span class="ticker-item"><span class="dot on"></span><b>Cartoon Network</b> Kids</span><span class="ticker-item"><span class="dot on"></span><b>Disney International</b> Kids</span><span class="ticker-item"><span class="dot on"></span><b>Disney Jr</b> Kids</span><span class="ticker-item"><span class="dot on"></span><b>Nick</b> Kids</span><span class="ticker-item"><span class="dot on"></span><b>Nickelodeon</b> Kids</span><span class="ticker-item"><span class="dot on"></span><b>Pogo</b> Kids</span><span class="ticker-item"><span class="dot on"></span><b>BANGLA CINEMA</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>ENC 2406</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>HBO HD</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>Hits</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>HITS MOVIES</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>Jalsha Movies HD</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>Movies Now HD</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>Star Gold 2 HD</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>SUPER HIT</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>Zee Cinema HD</b> Movies</span><span class="ticker-item"><span class="dot on"></span><b>Al Jazeera</b> News</span><span class="ticker-item"><span class="dot on"></span><b>Ananda TV</b> News</span><span class="ticker-item"><span class="dot on"></span><b>ATN Bangla</b> News</span><span class="ticker-item"><span class="dot on"></span><b>ATN News</b> News</span><span class="ticker-item"><span class="dot on"></span><b>BBC World</b> News</span><span class="ticker-item"><span class="dot on"></span><b>Boishakhi TV</b> News</span><span class="ticker-item"><span class="dot on"></span><b>BTV NEWS HD</b> News</span><span class="ticker-item"><span class="dot on"></span><b>Channel 24HD</b> News</span><span class="ticker-item"><span class="dot on"></span><b>Channel S</b> News</span><span class="ticker-item"><span class="dot on"></span><b>CNN</b> News</span><span class="ticker-item"><span class="dot on"></span><b>DBC NEWS</b> News</span></div>
+    </div>
+  </section>
+
+  <div class="notice"><span>&#9888;</span><div><strong>No live token yet.</strong> The links below use the bootstrap token from <code>token.example.json</code>, which expires quickly. Run the <code>_token-refresh</code> workflow (or <code>python3 scripts/refresh_token.py</code>) to bake in a fresh one - or deploy the relay, which keeps the token server-side.</div></div>
+  <div class="notice"><span>&#9888;</span><div><strong>HTTPS relay not configured.</strong> The panel is plain HTTP, so browsers block direct playback on this HTTPS page (VLC, mpv and TiviMate still work). Deploy <code>scripts/proxy_worker.js</code> to Cloudflare Workers, put its URL in <code>config.json &rarr; proxy.base_url</code>, then paste it in the field on any channel page. Full steps: <a href="https://github.com/muaaziqbalvip/nowirehetv#readme" style="color:inherit">README &rarr; HTTPS relay</a>.</div></div>
+  <div class="notice"><span>&#9888;</span><div><strong>Provisional status.</strong> This build uses the panel's own online flags; the <code>_status-check</code> workflow replaces them with real probe results (latency, bitrate, live-window) on its next run.</div></div>
+
+  <section class="toolbar" id="channels">
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search 170 channels - name, id or group..." autocomplete="off" aria-label="Search channels">
+    </div>
+    <div class="chips" role="group" aria-label="Filter by state">
+      <button class="chip" data-filter-state="all" aria-pressed="true">All</button>
+      <button class="chip" data-filter-state="live" aria-pressed="false">Live</button>
+      <button class="chip" data-filter-state="offline" aria-pressed="false">Offline</button>
+      <button class="chip" data-filter-state="panel" aria-pressed="false">Panel says online</button>
+    </div>
+    <select class="group-select" id="group" aria-label="Filter by group">
+      <option value="">All groups</option>
+      <option value="Bangla">Bangla (28)</option>
+    <option value="Entertainment">Entertainment (16)</option>
+    <option value="Infotainment">Infotainment (10)</option>
+    <option value="Kids">Kids (12)</option>
+    <option value="Movies">Movies (21)</option>
+    <option value="News">News (26)</option>
+    <option value="Other">Other (19)</option>
+    <option value="Sports">Sports (38)</option>
+    </select>
+  </section>
+
+  <div class="count-line">
+    <span>Showing <b id="visible-count">170</b> of 170 channels</span>
+    <span class="mono">updated 1m ago</span>
+  </div>
+
+  <div class="grid" id="channel-grid">
+        <article class="card" data-id="bkyl">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">A</div>
+        <div>
+          <h2 class="card-title">asiantvHD</h2>
+          <div class="card-sub">bkyl &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bkyl.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bkyl.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bkyl" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bcb3">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">BV</div>
+        <div>
+          <h2 class="card-title">Bangla Vision</h2>
+          <div class="card-sub">bcb3 &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bcb3.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bcb3.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bcb3" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b5jz">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">BH</div>
+        <div>
+          <h2 class="card-title">BanglaTV HD</h2>
+          <div class="card-sub">b5jz &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b5jz.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b5jz.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b5jz" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b511">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">B</div>
+        <div>
+          <h2 class="card-title">BijoyTV</h2>
+          <div class="card-sub">b511 &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b511.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b511.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b511" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bamp">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">BC</div>
+        <div>
+          <h2 class="card-title">BTV Chattagram</h2>
+          <div class="card-sub">bamp &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bamp.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bamp.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bamp" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="brwl">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">BH</div>
+        <div>
+          <h2 class="card-title">BTV HD</h2>
+          <div class="card-sub">brwl &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/brwl.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/brwl.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="brwl" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bmbq">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">CI</div>
+        <div>
+          <h2 class="card-title">Channel I HD</h2>
+          <div class="card-sub">bmbq &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bmbq.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bmbq.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bmbq" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b0v8">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">CB</div>
+        <div>
+          <h2 class="card-title">Colors Bangla HD</h2>
+          <div class="card-sub">b0v8 &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b0v8.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b0v8.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b0v8" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bxqa">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">EB</div>
+        <div>
+          <h2 class="card-title">Enterr10 Bangla</h2>
+          <div class="card-sub">bxqa &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bxqa.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bxqa.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bxqa" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bx72">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">MT</div>
+        <div>
+          <h2 class="card-title">Madani TV</h2>
+          <div class="card-sub">bx72 &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bx72.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bx72.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bx72" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bhb3">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">NH</div>
+        <div>
+          <h2 class="card-title">NTV HD EN-1</h2>
+          <div class="card-sub">bhb3 &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bhb3.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bhb3.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bhb3" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b5wy">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">RB</div>
+        <div>
+          <h2 class="card-title">Ruposhi Bangla</h2>
+          <div class="card-sub">b5wy &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b5wy.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b5wy.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b5wy" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bv6p">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">ST</div>
+        <div>
+          <h2 class="card-title">SA TV HD</h2>
+          <div class="card-sub">bv6p &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bv6p.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bv6p.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bv6p" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="brft">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SA</div>
+        <div>
+          <h2 class="card-title">Sony Aath</h2>
+          <div class="card-sub">brft &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/brft.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/brft.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="brft" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="biy1">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SB</div>
+        <div>
+          <h2 class="card-title">Star Bangla</h2>
+          <div class="card-sub">biy1 &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/biy1.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/biy1.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="biy1" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bxvd">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SJ</div>
+        <div>
+          <h2 class="card-title">Star Jalsha</h2>
+          <div class="card-sub">bxvd &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bxvd.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bxvd.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bxvd" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b539">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SB</div>
+        <div>
+          <h2 class="card-title">Sun Bangla HD</h2>
+          <div class="card-sub">b539 &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b539.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b539.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b539" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bl29">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">ZB</div>
+        <div>
+          <h2 class="card-title">Zee Bangla E</h2>
+          <div class="card-sub">bl29 &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bl29.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bl29.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bl29" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="byix">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">ZB</div>
+        <div>
+          <h2 class="card-title">Zee Bangla HD</h2>
+          <div class="card-sub">byix &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/byix.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/byix.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="byix" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bkys">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">CH</div>
+        <div>
+          <h2 class="card-title">Colors HD</h2>
+          <div class="card-sub">bkys &middot; Entertainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bkys.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bkys.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bkys" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b1y7">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">CI</div>
+        <div>
+          <h2 class="card-title">Colors Infinity HD</h2>
+          <div class="card-sub">b1y7 &middot; Entertainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b1y7.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b1y7.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b1y7" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b9zj">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">HS</div>
+        <div>
+          <h2 class="card-title">Hum Sitary</h2>
+          <div class="card-sub">b9zj &middot; Entertainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b9zj.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b9zj.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b9zj" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bvgy">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SS</div>
+        <div>
+          <h2 class="card-title">Sony SET HD</h2>
+          <div class="card-sub">bvgy &middot; Entertainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bvgy.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bvgy.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bvgy" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="blp5">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">ST</div>
+        <div>
+          <h2 class="card-title">SRK TV</h2>
+          <div class="card-sub">blp5 &middot; Entertainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/blp5.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/blp5.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="blp5" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="be7u">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SP</div>
+        <div>
+          <h2 class="card-title">Star Plus</h2>
+          <div class="card-sub">be7u &middot; Entertainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/be7u.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/be7u.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="be7u" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b8d3">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SP</div>
+        <div>
+          <h2 class="card-title">STAR Plus HD</h2>
+          <div class="card-sub">b8d3 &middot; Entertainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b8d3.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b8d3.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b8d3" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bd11">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">ZT</div>
+        <div>
+          <h2 class="card-title">Zee TV</h2>
+          <div class="card-sub">bd11 &middot; Entertainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bd11.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bd11.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bd11" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bups">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">AP</div>
+        <div>
+          <h2 class="card-title">Animal Planet</h2>
+          <div class="card-sub">bups &middot; Infotainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bups.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bups.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bups" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bw3c">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">DH</div>
+        <div>
+          <h2 class="card-title">Discovery HD</h2>
+          <div class="card-sub">bw3c &middot; Infotainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bw3c.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bw3c.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bw3c" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b49e">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">DS</div>
+        <div>
+          <h2 class="card-title">Discovery Science</h2>
+          <div class="card-sub">b49e &middot; Infotainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b49e.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b49e.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b49e" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="boee">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">H1</div>
+        <div>
+          <h2 class="card-title">History 18</h2>
+          <div class="card-sub">boee &middot; Infotainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/boee.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/boee.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="boee" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b668">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">NG</div>
+        <div>
+          <h2 class="card-title">Nat Geo Wild HD</h2>
+          <div class="card-sub">b668 &middot; Infotainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b668.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b668.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b668" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="befz">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">TH</div>
+        <div>
+          <h2 class="card-title">Travelxp HD</h2>
+          <div class="card-sub">befz &middot; Infotainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/befz.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/befz.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="befz" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b7np">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">CN</div>
+        <div>
+          <h2 class="card-title">Cartoon Network</h2>
+          <div class="card-sub">b7np &middot; Kids</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b7np.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b7np.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b7np" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bbxp">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">DI</div>
+        <div>
+          <h2 class="card-title">Disney International</h2>
+          <div class="card-sub">bbxp &middot; Kids</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bbxp.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bbxp.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bbxp" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bdqh">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">DJ</div>
+        <div>
+          <h2 class="card-title">Disney Jr</h2>
+          <div class="card-sub">bdqh &middot; Kids</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bdqh.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bdqh.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bdqh" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b010">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">N</div>
+        <div>
+          <h2 class="card-title">Nick</h2>
+          <div class="card-sub">b010 &middot; Kids</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b010.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b010.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b010" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bu0e">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">N</div>
+        <div>
+          <h2 class="card-title">Nickelodeon</h2>
+          <div class="card-sub">bu0e &middot; Kids</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bu0e.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bu0e.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bu0e" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bz5z">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">P</div>
+        <div>
+          <h2 class="card-title">Pogo</h2>
+          <div class="card-sub">bz5z &middot; Kids</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bz5z.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bz5z.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bz5z" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bzag">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">BC</div>
+        <div>
+          <h2 class="card-title">BANGLA CINEMA</h2>
+          <div class="card-sub">bzag &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bzag.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bzag.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bzag" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bonc">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">E2</div>
+        <div>
+          <h2 class="card-title">ENC 2406</h2>
+          <div class="card-sub">bonc &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bonc.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bonc.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bonc" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bc4f">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">HH</div>
+        <div>
+          <h2 class="card-title">HBO HD</h2>
+          <div class="card-sub">bc4f &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bc4f.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bc4f.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bc4f" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bw4t">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">H</div>
+        <div>
+          <h2 class="card-title">Hits</h2>
+          <div class="card-sub">bw4t &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bw4t.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bw4t.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bw4t" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bxqx">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">HM</div>
+        <div>
+          <h2 class="card-title">HITS MOVIES</h2>
+          <div class="card-sub">bxqx &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bxqx.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bxqx.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bxqx" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bt4k">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">JM</div>
+        <div>
+          <h2 class="card-title">Jalsha Movies HD</h2>
+          <div class="card-sub">bt4k &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bt4k.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bt4k.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bt4k" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bl8q">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">MN</div>
+        <div>
+          <h2 class="card-title">Movies Now HD</h2>
+          <div class="card-sub">bl8q &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bl8q.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bl8q.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bl8q" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="be8c">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SG</div>
+        <div>
+          <h2 class="card-title">Star Gold 2 HD</h2>
+          <div class="card-sub">be8c &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/be8c.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/be8c.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="be8c" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bgqc">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SH</div>
+        <div>
+          <h2 class="card-title">SUPER HIT</h2>
+          <div class="card-sub">bgqc &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bgqc.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bgqc.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bgqc" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bo14">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">ZC</div>
+        <div>
+          <h2 class="card-title">Zee Cinema HD</h2>
+          <div class="card-sub">bo14 &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bo14.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bo14.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bo14" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bjdd">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">AJ</div>
+        <div>
+          <h2 class="card-title">Al Jazeera</h2>
+          <div class="card-sub">bjdd &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bjdd.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bjdd.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bjdd" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b1xm">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">AT</div>
+        <div>
+          <h2 class="card-title">Ananda TV</h2>
+          <div class="card-sub">b1xm &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b1xm.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b1xm.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b1xm" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="brzr">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">AB</div>
+        <div>
+          <h2 class="card-title">ATN Bangla</h2>
+          <div class="card-sub">brzr &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/brzr.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/brzr.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="brzr" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bsmy">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">AN</div>
+        <div>
+          <h2 class="card-title">ATN News</h2>
+          <div class="card-sub">bsmy &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bsmy.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bsmy.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bsmy" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bw10">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">BW</div>
+        <div>
+          <h2 class="card-title">BBC World</h2>
+          <div class="card-sub">bw10 &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bw10.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bw10.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bw10" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b3s7">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">BT</div>
+        <div>
+          <h2 class="card-title">Boishakhi TV</h2>
+          <div class="card-sub">b3s7 &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b3s7.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b3s7.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b3s7" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bex9">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">BN</div>
+        <div>
+          <h2 class="card-title">BTV NEWS HD</h2>
+          <div class="card-sub">bex9 &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bex9.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bex9.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bex9" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bee4">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">C2</div>
+        <div>
+          <h2 class="card-title">Channel 24HD</h2>
+          <div class="card-sub">bee4 &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bee4.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bee4.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bee4" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="ber7">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">CS</div>
+        <div>
+          <h2 class="card-title">Channel S</h2>
+          <div class="card-sub">ber7 &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/ber7.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/ber7.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="ber7" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="byhp">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">C</div>
+        <div>
+          <h2 class="card-title">CNN</h2>
+          <div class="card-sub">byhp &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/byhp.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/byhp.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="byhp" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="beed">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">DN</div>
+        <div>
+          <h2 class="card-title">DBC NEWS</h2>
+          <div class="card-sub">beed &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/beed.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/beed.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="beed" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bw0r">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">DT</div>
+        <div>
+          <h2 class="card-title">Desh TV</h2>
+          <div class="card-sub">bw0r &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bw0r.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bw0r.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bw0r" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bgxr">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">ET</div>
+        <div>
+          <h2 class="card-title">Ekattor TV HD</h2>
+          <div class="card-sub">bgxr &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bgxr.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bgxr.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bgxr" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b8vx">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">ET</div>
+        <div>
+          <h2 class="card-title">EKHON TV</h2>
+          <div class="card-sub">b8vx &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b8vx.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b8vx.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b8vx" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bv5s">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">ET</div>
+        <div>
+          <h2 class="card-title">Ekushey TV</h2>
+          <div class="card-sub">bv5s &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bv5s.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bv5s.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bv5s" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bxlf">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">GT</div>
+        <div>
+          <h2 class="card-title">GLOBAL TV HD</h2>
+          <div class="card-sub">bxlf &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bxlf.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bxlf.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bxlf" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b96k">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">JT</div>
+        <div>
+          <h2 class="card-title">Jamuna Television</h2>
+          <div class="card-sub">b96k &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b96k.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b96k.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b96k" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bgj6">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">MT</div>
+        <div>
+          <h2 class="card-title">Mohona TV</h2>
+          <div class="card-sub">bgj6 &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bgj6.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bgj6.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bgj6" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b3fg">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">MH</div>
+        <div>
+          <h2 class="card-title">MYTV HD</h2>
+          <div class="card-sub">b3fg &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b3fg.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b3fg.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b3fg" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bo3s">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">N</div>
+        <div>
+          <h2 class="card-title">NEWS24HD</h2>
+          <div class="card-sub">bo3s &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bo3s.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bo3s.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bo3s" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bedv">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">NT</div>
+        <div>
+          <h2 class="card-title">NEXUS TV</h2>
+          <div class="card-sub">bedv &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bedv.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bedv.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bedv" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b521">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">RH</div>
+        <div>
+          <h2 class="card-title">Rtv HD</h2>
+          <div class="card-sub">b521 &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b521.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b521.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b521" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bol1">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">ST</div>
+        <div>
+          <h2 class="card-title">SANGSAD TV HD</h2>
+          <div class="card-sub">bol1 &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bol1.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bol1.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bol1" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bvm6">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">T1</div>
+        <div>
+          <h2 class="card-title">ThePapare 1</h2>
+          <div class="card-sub">bvm6 &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bvm6.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bvm6.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bvm6" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bqg4">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">T2</div>
+        <div>
+          <h2 class="card-title">ThePapare 2</h2>
+          <div class="card-sub">bqg4 &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bqg4.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bqg4.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bqg4" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bkra">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">U2</div>
+        <div>
+          <h2 class="card-title">UDP 228.2.2.2:1053 #1907</h2>
+          <div class="card-sub">bkra &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bkra.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bkra.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bkra" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="brme">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">U2</div>
+        <div>
+          <h2 class="card-title">UDP 228.2.2.2:1062 #2111</h2>
+          <div class="card-sub">brme &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/brme.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/brme.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="brme" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="baeg">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">U2</div>
+        <div>
+          <h2 class="card-title">UDP 228.2.2.2:1064 #2811</h2>
+          <div class="card-sub">baeg &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/baeg.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/baeg.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="baeg" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bbtz">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">U2</div>
+        <div>
+          <h2 class="card-title">UDP 228.2.2.2:1087 #2813</h2>
+          <div class="card-sub">bbtz &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bbtz.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bbtz.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bbtz" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bpwx">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">U2</div>
+        <div>
+          <h2 class="card-title">UDP 228.2.2.2:1088 #2812</h2>
+          <div class="card-sub">bpwx &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bpwx.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bpwx.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bpwx" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b4au">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">U2</div>
+        <div>
+          <h2 class="card-title">UDP 228.2.2.2:1094 #2817</h2>
+          <div class="card-sub">b4au &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b4au.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b4au.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b4au" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="btpa">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">U2</div>
+        <div>
+          <h2 class="card-title">UDP 228.2.2.2:1103 #2113</h2>
+          <div class="card-sub">btpa &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/btpa.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/btpa.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="btpa" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bsy8">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">00</div>
+        <div>
+          <h2 class="card-title">0001_TSPORTS</h2>
+          <div class="card-sub">bsy8 &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bsy8.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bsy8.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bsy8" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bo91">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">BS</div>
+        <div>
+          <h2 class="card-title">Bein Sport 1</h2>
+          <div class="card-sub">bo91 &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bo91.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bo91.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bo91" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bl9s">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">BS</div>
+        <div>
+          <h2 class="card-title">Bein Sport 2</h2>
+          <div class="card-sub">bl9s &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bl9s.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bl9s.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bl9s" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bry1">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">BX</div>
+        <div>
+          <h2 class="card-title">Bein Xtra</h2>
+          <div class="card-sub">bry1 &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bry1.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bry1.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bry1" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bqfr">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">E</div>
+        <div>
+          <h2 class="card-title">Eurosport</h2>
+          <div class="card-sub">bqfr &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bqfr.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bqfr.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bqfr" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b4q7">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">EH</div>
+        <div>
+          <h2 class="card-title">Eurosport HD</h2>
+          <div class="card-sub">b4q7 &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b4q7.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b4q7.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b4q7" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bemd">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">F2</div>
+        <div>
+          <h2 class="card-title">FIFA 2026 Unite8 2 SD</h2>
+          <div class="card-sub">bemd &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bemd.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bemd.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bemd" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bt59">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">KS</div>
+        <div>
+          <h2 class="card-title">KSA Sport 1</h2>
+          <div class="card-sub">bt59 &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bt59.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bt59.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bt59" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bo87">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">P</div>
+        <div>
+          <h2 class="card-title">PTV-SPORTS-HD</h2>
+          <div class="card-sub">bo87 &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bo87.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bo87.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bo87" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bm3w">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SS</div>
+        <div>
+          <h2 class="card-title">SKYNET SPORTS</h2>
+          <div class="card-sub">bm3w &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bm3w.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bm3w.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bm3w" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b7cm">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SS</div>
+        <div>
+          <h2 class="card-title">Sony Sports  Ten 1</h2>
+          <div class="card-sub">b7cm &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b7cm.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b7cm.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b7cm" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bn59">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SS</div>
+        <div>
+          <h2 class="card-title">Sony Sports 2</h2>
+          <div class="card-sub">bn59 &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bn59.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bn59.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bn59" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bdvl">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SS</div>
+        <div>
+          <h2 class="card-title">Star Sports 2 DL</h2>
+          <div class="card-sub">bdvl &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bdvl.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bdvl.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bdvl" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bo3x">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SS</div>
+        <div>
+          <h2 class="card-title">Star Sports Select 1 HD</h2>
+          <div class="card-sub">bo3x &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bo3x.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bo3x.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bo3x" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bcfe">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SS</div>
+        <div>
+          <h2 class="card-title">Star Sports Select 2 HD</h2>
+          <div class="card-sub">bcfe &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bcfe.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bcfe.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bcfe" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bwon">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">T3</div>
+        <div>
+          <h2 class="card-title">TEN 3</h2>
+          <div class="card-sub">bwon &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bwon.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bwon.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bwon" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b3b2">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">T5</div>
+        <div>
+          <h2 class="card-title">TEN 5 HD</h2>
+          <div class="card-sub">b3b2 &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b3b2.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b3b2.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b3b2" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bqxt">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">TC</div>
+        <div>
+          <h2 class="card-title">Ten Cricket</h2>
+          <div class="card-sub">bqxt &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bqxt.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bqxt.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bqxt" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bhm5">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">US</div>
+        <div>
+          <h2 class="card-title">Unite8 SD1</h2>
+          <div class="card-sub">bhm5 &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bhm5.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bhm5.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bhm5" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="boan">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">W2</div>
+        <div>
+          <h2 class="card-title">WWE 24*7</h2>
+          <div class="card-sub">boan &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge live"><span class="dot on"></span>Live</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/boan.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/boan.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="boan" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bliq">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">CB</div>
+        <div>
+          <h2 class="card-title">Colors Bangla HD</h2>
+          <div class="card-sub">bliq &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bliq.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bliq.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bliq" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="boe4">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">EB</div>
+        <div>
+          <h2 class="card-title">Enterr10 Bangla</h2>
+          <div class="card-sub">boe4 &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/boe4.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/boe4.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="boe4" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bebi">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">RB</div>
+        <div>
+          <h2 class="card-title">Ruposhi Bangla</h2>
+          <div class="card-sub">bebi &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bebi.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bebi.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bebi" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bwki">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SA</div>
+        <div>
+          <h2 class="card-title">Sony Aath</h2>
+          <div class="card-sub">bwki &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bwki.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bwki.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bwki" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b3j8">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SB</div>
+        <div>
+          <h2 class="card-title">Star Bangla</h2>
+          <div class="card-sub">b3j8 &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b3j8.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b3j8.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b3j8" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="brfa">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SJ</div>
+        <div>
+          <h2 class="card-title">Star Jalsha</h2>
+          <div class="card-sub">brfa &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/brfa.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/brfa.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="brfa" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bvv5">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SB</div>
+        <div>
+          <h2 class="card-title">Sun Bangla HD</h2>
+          <div class="card-sub">bvv5 &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bvv5.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bvv5.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bvv5" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b7a8">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">ZB</div>
+        <div>
+          <h2 class="card-title">Zee Bangla E</h2>
+          <div class="card-sub">b7a8 &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b7a8.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b7a8.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b7a8" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bcaa">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">ZB</div>
+        <div>
+          <h2 class="card-title">Zee Bangla HD</h2>
+          <div class="card-sub">bcaa &middot; Bangla</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bcaa.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bcaa.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bcaa" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b801">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">CH</div>
+        <div>
+          <h2 class="card-title">Colors HD</h2>
+          <div class="card-sub">b801 &middot; Entertainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b801.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b801.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b801" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bnjd">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">CI</div>
+        <div>
+          <h2 class="card-title">Colors Infinity HD</h2>
+          <div class="card-sub">bnjd &middot; Entertainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bnjd.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bnjd.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bnjd" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bo00">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">HS</div>
+        <div>
+          <h2 class="card-title">Hum Sitary</h2>
+          <div class="card-sub">bo00 &middot; Entertainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bo00.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bo00.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bo00" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b18x">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SS</div>
+        <div>
+          <h2 class="card-title">Sony SET HD</h2>
+          <div class="card-sub">b18x &middot; Entertainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b18x.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b18x.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b18x" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bs0g">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">ST</div>
+        <div>
+          <h2 class="card-title">SRK TV</h2>
+          <div class="card-sub">bs0g &middot; Entertainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bs0g.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bs0g.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bs0g" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="beu7">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SP</div>
+        <div>
+          <h2 class="card-title">Star Plus</h2>
+          <div class="card-sub">beu7 &middot; Entertainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/beu7.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/beu7.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="beu7" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bdwg">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SP</div>
+        <div>
+          <h2 class="card-title">STAR Plus HD</h2>
+          <div class="card-sub">bdwg &middot; Entertainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bdwg.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bdwg.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bdwg" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b84n">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">ZT</div>
+        <div>
+          <h2 class="card-title">Zee TV</h2>
+          <div class="card-sub">b84n &middot; Entertainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b84n.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b84n.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b84n" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bjc1">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">AP</div>
+        <div>
+          <h2 class="card-title">Animal Planet</h2>
+          <div class="card-sub">bjc1 &middot; Infotainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bjc1.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bjc1.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bjc1" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bj4m">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">H1</div>
+        <div>
+          <h2 class="card-title">History 18</h2>
+          <div class="card-sub">bj4m &middot; Infotainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bj4m.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bj4m.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bj4m" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bmoe">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">NG</div>
+        <div>
+          <h2 class="card-title">Nat Geo Wild HD</h2>
+          <div class="card-sub">bmoe &middot; Infotainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bmoe.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bmoe.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bmoe" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b96j">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">TH</div>
+        <div>
+          <h2 class="card-title">Travelxp HD</h2>
+          <div class="card-sub">b96j &middot; Infotainment</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b96j.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b96j.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b96j" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bcp0">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">CN</div>
+        <div>
+          <h2 class="card-title">Cartoon Network</h2>
+          <div class="card-sub">bcp0 &middot; Kids</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bcp0.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bcp0.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bcp0" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bpbb">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">DI</div>
+        <div>
+          <h2 class="card-title">Disney International</h2>
+          <div class="card-sub">bpbb &middot; Kids</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bpbb.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bpbb.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bpbb" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bwnh">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">DJ</div>
+        <div>
+          <h2 class="card-title">Disney Jr</h2>
+          <div class="card-sub">bwnh &middot; Kids</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bwnh.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bwnh.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bwnh" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bxyc">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">N</div>
+        <div>
+          <h2 class="card-title">Nick</h2>
+          <div class="card-sub">bxyc &middot; Kids</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bxyc.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bxyc.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bxyc" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="buon">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">N</div>
+        <div>
+          <h2 class="card-title">Nickelodeon</h2>
+          <div class="card-sub">buon &middot; Kids</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/buon.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/buon.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="buon" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bse9">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">P</div>
+        <div>
+          <h2 class="card-title">Pogo</h2>
+          <div class="card-sub">bse9 &middot; Kids</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bse9.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bse9.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bse9" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b0wm">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">BC</div>
+        <div>
+          <h2 class="card-title">BANGLA CINEMA</h2>
+          <div class="card-sub">b0wm &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b0wm.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b0wm.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b0wm" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bi64">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">E2</div>
+        <div>
+          <h2 class="card-title">ENC 2406</h2>
+          <div class="card-sub">bi64 &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bi64.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bi64.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bi64" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b37l">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">HH</div>
+        <div>
+          <h2 class="card-title">HBO HD</h2>
+          <div class="card-sub">b37l &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b37l.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b37l.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b37l" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b5wa">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">H</div>
+        <div>
+          <h2 class="card-title">Hits</h2>
+          <div class="card-sub">b5wa &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b5wa.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b5wa.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b5wa" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b9v0">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">HM</div>
+        <div>
+          <h2 class="card-title">HITS MOVIES</h2>
+          <div class="card-sub">b9v0 &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b9v0.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b9v0.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b9v0" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bzwf">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">JM</div>
+        <div>
+          <h2 class="card-title">Jalsha Movies HD</h2>
+          <div class="card-sub">bzwf &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bzwf.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bzwf.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bzwf" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b3yb">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">MN</div>
+        <div>
+          <h2 class="card-title">Movies Now HD</h2>
+          <div class="card-sub">b3yb &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b3yb.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b3yb.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b3yb" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bfc4">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SG</div>
+        <div>
+          <h2 class="card-title">Star Gold 2 HD</h2>
+          <div class="card-sub">bfc4 &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bfc4.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bfc4.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bfc4" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bt92">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SH</div>
+        <div>
+          <h2 class="card-title">SUPER HIT</h2>
+          <div class="card-sub">bt92 &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bt92.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bt92.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bt92" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bwx6">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">ZC</div>
+        <div>
+          <h2 class="card-title">Zee Cinema HD</h2>
+          <div class="card-sub">bwx6 &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bwx6.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bwx6.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bwx6" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bbei">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">ZC</div>
+        <div>
+          <h2 class="card-title">Zee Cinema HD</h2>
+          <div class="card-sub">bbei &middot; Movies</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bbei.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bbei.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bbei" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bz7z">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">AJ</div>
+        <div>
+          <h2 class="card-title">Al Jazeera</h2>
+          <div class="card-sub">bz7z &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bz7z.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bz7z.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bz7z" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bw05">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">BW</div>
+        <div>
+          <h2 class="card-title">BBC World</h2>
+          <div class="card-sub">bw05 &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bw05.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bw05.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bw05" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bzmd">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">C</div>
+        <div>
+          <h2 class="card-title">CNN</h2>
+          <div class="card-sub">bzmd &middot; News</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bzmd.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bzmd.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bzmd" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="buvm">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">T1</div>
+        <div>
+          <h2 class="card-title">ThePapare 1</h2>
+          <div class="card-sub">buvm &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/buvm.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/buvm.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="buvm" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bksz">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">T2</div>
+        <div>
+          <h2 class="card-title">ThePapare 2</h2>
+          <div class="card-sub">bksz &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bksz.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bksz.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bksz" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b38z">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">U2</div>
+        <div>
+          <h2 class="card-title">UDP 228.2.2.2:1053 #1907</h2>
+          <div class="card-sub">b38z &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b38z.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b38z.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b38z" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bvfo">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">U2</div>
+        <div>
+          <h2 class="card-title">UDP 228.2.2.2:1062 #2111</h2>
+          <div class="card-sub">bvfo &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bvfo.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bvfo.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bvfo" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bo7a">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">U2</div>
+        <div>
+          <h2 class="card-title">UDP 228.2.2.2:1064 #2811</h2>
+          <div class="card-sub">bo7a &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bo7a.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bo7a.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bo7a" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bpfk">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">U2</div>
+        <div>
+          <h2 class="card-title">UDP 228.2.2.2:1077 #3219</h2>
+          <div class="card-sub">bpfk &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bpfk.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bpfk.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bpfk" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bzjz">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">U2</div>
+        <div>
+          <h2 class="card-title">UDP 228.2.2.2:1087 #2813</h2>
+          <div class="card-sub">bzjz &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bzjz.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bzjz.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bzjz" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bvjv">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">U2</div>
+        <div>
+          <h2 class="card-title">UDP 228.2.2.2:1088 #2812</h2>
+          <div class="card-sub">bvjv &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bvjv.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bvjv.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bvjv" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b837">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">U2</div>
+        <div>
+          <h2 class="card-title">UDP 228.2.2.2:1094 #2817</h2>
+          <div class="card-sub">b837 &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b837.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b837.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b837" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b1pj">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">U2</div>
+        <div>
+          <h2 class="card-title">UDP 228.2.2.2:1103 #2113</h2>
+          <div class="card-sub">b1pj &middot; Other</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b1pj.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b1pj.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b1pj" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bob4">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">BS</div>
+        <div>
+          <h2 class="card-title">Bein Sport 1</h2>
+          <div class="card-sub">bob4 &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bob4.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bob4.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bob4" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bui7">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">BS</div>
+        <div>
+          <h2 class="card-title">Bein Sport 2</h2>
+          <div class="card-sub">bui7 &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bui7.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bui7.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bui7" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bmm9">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">BX</div>
+        <div>
+          <h2 class="card-title">Bein Xtra</h2>
+          <div class="card-sub">bmm9 &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bmm9.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bmm9.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bmm9" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bae0">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">E</div>
+        <div>
+          <h2 class="card-title">Eurosport</h2>
+          <div class="card-sub">bae0 &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bae0.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bae0.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bae0" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bdfw">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">F2</div>
+        <div>
+          <h2 class="card-title">FIFA 2026 Unite8 2 SD</h2>
+          <div class="card-sub">bdfw &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bdfw.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bdfw.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bdfw" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bd1k">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">KS</div>
+        <div>
+          <h2 class="card-title">KSA Sport 1</h2>
+          <div class="card-sub">bd1k &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bd1k.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bd1k.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bd1k" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bq5a">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">P</div>
+        <div>
+          <h2 class="card-title">PTV-SPORTS-HD</h2>
+          <div class="card-sub">bq5a &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bq5a.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bq5a.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bq5a" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b5js">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SS</div>
+        <div>
+          <h2 class="card-title">SKYNET SPORTS</h2>
+          <div class="card-sub">b5js &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b5js.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b5js.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b5js" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bz8n">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SS</div>
+        <div>
+          <h2 class="card-title">Sony Sports  Ten 1</h2>
+          <div class="card-sub">bz8n &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bz8n.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bz8n.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bz8n" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bbym">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SS</div>
+        <div>
+          <h2 class="card-title">Sony Sports 2</h2>
+          <div class="card-sub">bbym &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bbym.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bbym.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bbym" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bqj2">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SS</div>
+        <div>
+          <h2 class="card-title">Star Sports 2 DL</h2>
+          <div class="card-sub">bqj2 &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bqj2.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bqj2.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bqj2" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b77z">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SS</div>
+        <div>
+          <h2 class="card-title">Star Sports Select 1 HD</h2>
+          <div class="card-sub">b77z &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b77z.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b77z.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b77z" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bi9k">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">SS</div>
+        <div>
+          <h2 class="card-title">Star Sports Select 2 HD</h2>
+          <div class="card-sub">bi9k &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bi9k.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bi9k.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bi9k" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b22h">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">T3</div>
+        <div>
+          <h2 class="card-title">TEN 3</h2>
+          <div class="card-sub">b22h &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b22h.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b22h.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b22h" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b1au">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">T5</div>
+        <div>
+          <h2 class="card-title">TEN 5 HD</h2>
+          <div class="card-sub">b1au &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b1au.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b1au.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b1au" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bfxw">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">TC</div>
+        <div>
+          <h2 class="card-title">Ten Cricket</h2>
+          <div class="card-sub">bfxw &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bfxw.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bfxw.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bfxw" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="b2xt">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">US</div>
+        <div>
+          <h2 class="card-title">Unite8 SD1</h2>
+          <div class="card-sub">b2xt &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/b2xt.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/b2xt.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="b2xt" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <article class="card" data-id="bifa">
+      <div class="card-head">
+        <div class="avatar" aria-hidden="true">W2</div>
+        <div>
+          <h2 class="card-title">WWE 24*7</h2>
+          <div class="card-sub">bifa &middot; Sports</div>
+        </div>
+      </div>
+      <div class="card-meta"><span class="badge offline"><span class="dot off"></span>Offline</span></div>
+      <div class="card-actions">
+        <a class="btn primary" href="ch/bifa.html">&#9654; Watch</a>
+        <a class="btn ghost" href="playlist/bifa.m3u" title="M3U playlist for this channel">M3U</a>
+        <button class="btn ghost" type="button" data-copy="stream" data-id="bifa" title="Copy stream URL">&#10697;</button>
+      </div>
+    </article>
+    <div class="empty" id="empty-state" style="display:none">
+      <strong>No channel matches this filter.</strong><br>
+      Try another search term, or clear the group filter.
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap footer-grid">
+    <div style="max-width:52ch">
+      <strong style="color:var(--text)">EasyISP24 Restream</strong><br>
+      Unofficial portal generated from a third-party panel - you must be authorised to redistribute every channel listed here.<br>
+      Source catalog: <span class="mono">EasyISP24 Stream v1.0.59</span>
+    </div>
+    <div>
+      <a href="playlist.m3u">playlist.m3u</a> &middot;
+      <a href="data/channels.json">channels.json</a> &middot;
+      <a href="status.json">status.json</a> &middot;
+      <a href="watch_list.json">watch_list.json</a><br>
+      Built 2026-10-31T08:39:33Z by <span class="mono">scripts/build_site.py</span>
+    </div>
+  </div>
+</footer>
+
+<script id="site-config" type="application/json">{"proxy":"","pages_base":"https://muaaziqbalvip.github.io/nowirehetv","generated_at":"2026-10-31T08:40:51Z","channels":[{"id":"bkyl","name":"asiantvHD","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bkyl/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bcb3","name":"Bangla Vision","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bcb3/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b5jz","name":"BanglaTV HD","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b5jz/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b511","name":"BijoyTV","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b511/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bamp","name":"BTV Chattagram","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bamp/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"brwl","name":"BTV HD","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/brwl/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bmbq","name":"Channel I HD","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bmbq/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b0v8","name":"Colors Bangla HD","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b0v8/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bxqa","name":"Enterr10 Bangla","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bxqa/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bx72","name":"Madani TV","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bx72/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bhb3","name":"NTV HD EN-1","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bhb3/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b5wy","name":"Ruposhi Bangla","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b5wy/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bv6p","name":"SA TV HD","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bv6p/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"brft","name":"Sony Aath","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/brft/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"biy1","name":"Star Bangla","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/biy1/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bxvd","name":"Star Jalsha","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bxvd/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b539","name":"Sun Bangla HD","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b539/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bl29","name":"Zee Bangla E","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bl29/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"byix","name":"Zee Bangla HD","group":"Bangla","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/byix/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bkys","name":"Colors HD","group":"Entertainment","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bkys/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b1y7","name":"Colors Infinity HD","group":"Entertainment","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b1y7/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b9zj","name":"Hum Sitary","group":"Entertainment","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b9zj/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bvgy","name":"Sony SET HD","group":"Entertainment","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bvgy/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"blp5","name":"SRK TV","group":"Entertainment","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/blp5/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"be7u","name":"Star Plus","group":"Entertainment","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/be7u/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b8d3","name":"STAR Plus HD","group":"Entertainment","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b8d3/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bd11","name":"Zee TV","group":"Entertainment","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bd11/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bups","name":"Animal Planet","group":"Infotainment","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bups/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bw3c","name":"Discovery HD","group":"Infotainment","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bw3c/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b49e","name":"Discovery Science","group":"Infotainment","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b49e/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"boee","name":"History 18","group":"Infotainment","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/boee/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b668","name":"Nat Geo Wild HD","group":"Infotainment","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b668/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"befz","name":"Travelxp HD","group":"Infotainment","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/befz/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b7np","name":"Cartoon Network","group":"Kids","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b7np/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bbxp","name":"Disney International","group":"Kids","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bbxp/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bdqh","name":"Disney Jr","group":"Kids","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bdqh/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b010","name":"Nick","group":"Kids","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b010/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bu0e","name":"Nickelodeon","group":"Kids","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bu0e/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bz5z","name":"Pogo","group":"Kids","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bz5z/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bzag","name":"BANGLA CINEMA","group":"Movies","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bzag/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bonc","name":"ENC 2406","group":"Movies","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bonc/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bc4f","name":"HBO HD","group":"Movies","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bc4f/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bw4t","name":"Hits","group":"Movies","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bw4t/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bxqx","name":"HITS MOVIES","group":"Movies","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bxqx/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bt4k","name":"Jalsha Movies HD","group":"Movies","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bt4k/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bl8q","name":"Movies Now HD","group":"Movies","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bl8q/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"be8c","name":"Star Gold 2 HD","group":"Movies","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/be8c/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bgqc","name":"SUPER HIT","group":"Movies","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bgqc/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bo14","name":"Zee Cinema HD","group":"Movies","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bo14/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bjdd","name":"Al Jazeera","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bjdd/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b1xm","name":"Ananda TV","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b1xm/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"brzr","name":"ATN Bangla","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/brzr/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bsmy","name":"ATN News","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bsmy/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bw10","name":"BBC World","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bw10/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b3s7","name":"Boishakhi TV","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b3s7/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bex9","name":"BTV NEWS HD","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bex9/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bee4","name":"Channel 24HD","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bee4/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"ber7","name":"Channel S","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/ber7/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"byhp","name":"CNN","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/byhp/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"beed","name":"DBC NEWS","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/beed/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bw0r","name":"Desh TV","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bw0r/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bgxr","name":"Ekattor TV HD","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bgxr/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b8vx","name":"EKHON TV","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b8vx/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bv5s","name":"Ekushey TV","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bv5s/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bxlf","name":"GLOBAL TV HD","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bxlf/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b96k","name":"Jamuna Television","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b96k/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bgj6","name":"Mohona TV","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bgj6/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b3fg","name":"MYTV HD","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b3fg/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bo3s","name":"NEWS24HD","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bo3s/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bedv","name":"NEXUS TV","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bedv/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b521","name":"Rtv HD","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b521/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bol1","name":"SANGSAD TV HD","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bol1/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bvm6","name":"ThePapare 1","group":"Other","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bvm6/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bqg4","name":"ThePapare 2","group":"Other","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bqg4/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bkra","name":"UDP 228.2.2.2:1053 #1907","group":"Other","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bkra/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"brme","name":"UDP 228.2.2.2:1062 #2111","group":"Other","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/brme/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"baeg","name":"UDP 228.2.2.2:1064 #2811","group":"Other","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/baeg/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bbtz","name":"UDP 228.2.2.2:1087 #2813","group":"Other","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bbtz/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bpwx","name":"UDP 228.2.2.2:1088 #2812","group":"Other","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bpwx/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b4au","name":"UDP 228.2.2.2:1094 #2817","group":"Other","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b4au/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"btpa","name":"UDP 228.2.2.2:1103 #2113","group":"Other","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/btpa/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bsy8","name":"0001_TSPORTS","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bsy8/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bo91","name":"Bein Sport 1","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bo91/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bl9s","name":"Bein Sport 2","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bl9s/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bry1","name":"Bein Xtra","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bry1/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bqfr","name":"Eurosport","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bqfr/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b4q7","name":"Eurosport HD","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b4q7/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bemd","name":"FIFA 2026 Unite8 2 SD","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bemd/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bt59","name":"KSA Sport 1","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bt59/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bo87","name":"PTV-SPORTS-HD","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bo87/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bm3w","name":"SKYNET SPORTS","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bm3w/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b7cm","name":"Sony Sports  Ten 1","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b7cm/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bn59","name":"Sony Sports 2","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bn59/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bdvl","name":"Star Sports 2 DL","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bdvl/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bo3x","name":"Star Sports Select 1 HD","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bo3x/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bcfe","name":"Star Sports Select 2 HD","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bcfe/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bwon","name":"TEN 3","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bwon/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b3b2","name":"TEN 5 HD","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/b3b2/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bqxt","name":"Ten Cricket","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bqxt/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bhm5","name":"Unite8 SD1","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bhm5/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"boan","name":"WWE 24*7","group":"Sports","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/boan/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bliq","name":"Colors Bangla HD","group":"Bangla","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bliq/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"boe4","name":"Enterr10 Bangla","group":"Bangla","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/boe4/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bebi","name":"Ruposhi Bangla","group":"Bangla","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bebi/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bwki","name":"Sony Aath","group":"Bangla","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bwki/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b3j8","name":"Star Bangla","group":"Bangla","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b3j8/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"brfa","name":"Star Jalsha","group":"Bangla","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/brfa/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bvv5","name":"Sun Bangla HD","group":"Bangla","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bvv5/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b7a8","name":"Zee Bangla E","group":"Bangla","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b7a8/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bcaa","name":"Zee Bangla HD","group":"Bangla","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bcaa/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b801","name":"Colors HD","group":"Entertainment","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b801/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bnjd","name":"Colors Infinity HD","group":"Entertainment","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bnjd/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bo00","name":"Hum Sitary","group":"Entertainment","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bo00/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b18x","name":"Sony SET HD","group":"Entertainment","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b18x/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bs0g","name":"SRK TV","group":"Entertainment","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bs0g/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"beu7","name":"Star Plus","group":"Entertainment","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/beu7/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bdwg","name":"STAR Plus HD","group":"Entertainment","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bdwg/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b84n","name":"Zee TV","group":"Entertainment","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b84n/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bjc1","name":"Animal Planet","group":"Infotainment","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bjc1/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bj4m","name":"History 18","group":"Infotainment","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bj4m/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bmoe","name":"Nat Geo Wild HD","group":"Infotainment","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bmoe/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b96j","name":"Travelxp HD","group":"Infotainment","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b96j/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bcp0","name":"Cartoon Network","group":"Kids","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bcp0/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bpbb","name":"Disney International","group":"Kids","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bpbb/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bwnh","name":"Disney Jr","group":"Kids","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bwnh/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bxyc","name":"Nick","group":"Kids","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bxyc/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"buon","name":"Nickelodeon","group":"Kids","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/buon/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bse9","name":"Pogo","group":"Kids","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bse9/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b0wm","name":"BANGLA CINEMA","group":"Movies","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b0wm/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bi64","name":"ENC 2406","group":"Movies","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bi64/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b37l","name":"HBO HD","group":"Movies","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b37l/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b5wa","name":"Hits","group":"Movies","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b5wa/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b9v0","name":"HITS MOVIES","group":"Movies","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b9v0/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bzwf","name":"Jalsha Movies HD","group":"Movies","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bzwf/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b3yb","name":"Movies Now HD","group":"Movies","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b3yb/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bfc4","name":"Star Gold 2 HD","group":"Movies","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bfc4/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bt92","name":"SUPER HIT","group":"Movies","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bt92/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bwx6","name":"Zee Cinema HD","group":"Movies","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bwx6/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bbei","name":"Zee Cinema HD","group":"Movies","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bbei/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bz7z","name":"Al Jazeera","group":"News","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bz7z/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bw05","name":"BBC World","group":"News","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bw05/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bzmd","name":"CNN","group":"News","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bzmd/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"buvm","name":"ThePapare 1","group":"Other","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/buvm/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bksz","name":"ThePapare 2","group":"Other","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bksz/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b38z","name":"UDP 228.2.2.2:1053 #1907","group":"Other","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b38z/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bvfo","name":"UDP 228.2.2.2:1062 #2111","group":"Other","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bvfo/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bo7a","name":"UDP 228.2.2.2:1064 #2811","group":"Other","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bo7a/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bpfk","name":"UDP 228.2.2.2:1077 #3219","group":"Other","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bpfk/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bzjz","name":"UDP 228.2.2.2:1087 #2813","group":"Other","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bzjz/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bvjv","name":"UDP 228.2.2.2:1088 #2812","group":"Other","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bvjv/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b837","name":"UDP 228.2.2.2:1094 #2817","group":"Other","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b837/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b1pj","name":"UDP 228.2.2.2:1103 #2113","group":"Other","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b1pj/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bob4","name":"Bein Sport 1","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bob4/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bui7","name":"Bein Sport 2","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bui7/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bmm9","name":"Bein Xtra","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bmm9/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bae0","name":"Eurosport","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bae0/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bdfw","name":"FIFA 2026 Unite8 2 SD","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bdfw/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bd1k","name":"KSA Sport 1","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bd1k/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bq5a","name":"PTV-SPORTS-HD","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bq5a/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b5js","name":"SKYNET SPORTS","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b5js/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bz8n","name":"Sony Sports  Ten 1","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bz8n/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bbym","name":"Sony Sports 2","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bbym/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bqj2","name":"Star Sports 2 DL","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bqj2/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b77z","name":"Star Sports Select 1 HD","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b77z/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bi9k","name":"Star Sports Select 2 HD","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bi9k/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b22h","name":"TEN 3","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b22h/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b1au","name":"TEN 5 HD","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b1au/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bfxw","name":"Ten Cricket","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bfxw/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"b2xt","name":"Unite8 SD1","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/b2xt/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"},{"id":"bifa","name":"WWE 24*7","group":"Sports","online":false,"state":"offline","stream_url":"http://103.151.60.162:2122/play/bifa/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"}]}</script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

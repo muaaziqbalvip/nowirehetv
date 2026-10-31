@@ -1,0 +1,3 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="b1pj" tvg-name="UDP 228.2.2.2:1103 #2113" tvg-logo="" group-title="Other",UDP 228.2.2.2:1103 #2113
+http://103.151.60.162:2122/play/b1pj/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8

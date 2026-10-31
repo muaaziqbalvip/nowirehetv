@@ -1,0 +1,29 @@
+# Cloudflare Worker relay for the HTTPS playback layer.
+#
+#   npx wrangler kv namespace create TOKEN_KV      # copy the id below
+#   npx wrangler secret put TOKEN                  # optional token bootstrap
+#   npx wrangler deploy
+#
+# Then put the printed URL (https://<name>.<subdomain>.workers.dev) into
+# config.json -> proxy.base_url, so every playlist/player link becomes https.
+
+name = "easyisp24-restream"
+main = "scripts/proxy_worker.js"
+compatibility_date = "2024-11-01"
+workers_dev = true
+
+[vars]
+SOURCE_BASE = "http://103.151.60.162:2122"
+LIST_PATH = "/watch/list"
+PLAY_TEMPLATE = "/play/<ID>/index.m3u8?token=<TOKEN>"
+USER_AGENT = "VLC/3.0.20"
+TOKEN_FIELD = "token"
+ALLOWED_ORIGINS = "*"
+
+# Optional: bind KV so the token survives between requests and is refreshed
+# automatically. Create it with `npx wrangler kv namespace create TOKEN_KV`
+# and paste the returned id here (do not commit a real id to a public repo -
+# set it in the Cloudflare dashboard or use `wrangler deploy --var` instead).
+# [[kv_namespaces]]
+# binding = "TOKEN_KV"
+# id = "<your-kv-namespace-id>"

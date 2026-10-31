@@ -1,0 +1,65 @@
+# ==============================================================================
+# Rebuild the portal whenever the code, templates or config change.
+# (The two bots already rebuild after their own refresh.)
+# ==============================================================================
+name: _site-build
+
+on:
+  push:
+    paths:
+      - "config.json"
+      - "templates/**"
+      - "scripts/**"
+      - "data/**"
+      - "watch_list.json"
+      - "status.json"
+      - "README.md"
+  workflow_dispatch:
+
+concurrency:
+  group: site-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build portal
+        run: |
+          python3 scripts/build_site.py
+          python3 scripts/update_readme.py
+
+      - name: Sanity check generated output
+        run: |
+          python3 - <<'PY'
+          import pathlib, sys
+          out = pathlib.Path("docs")
+          required = ["index.html", "playlist.m3u", "status.json", "watch_list.json",
+                      "assets/site.css", "assets/site.js", ".nojekyll"]
+          missing = [name for name in required if not (out / name).exists()]
+          if missing:
+              print("::error::missing generated files: " + ", ".join(missing))
+              sys.exit(1)
+          pages = sorted((out / "ch").glob("*.html"))
+          print(f"portal ok: {len(pages)} channel pages, "
+                f"{len(list((out / 'playlist').glob('*.m3u')))} playlists")
+          PY
+
+      - name: Commit
+        run: |
+          bash scripts/ci_commit.sh "chore(site): rebuild portal"
+
+      - name: Tests
+        run: python3 -m unittest discover -s tests -v

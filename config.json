@@ -1,0 +1,79 @@
+{
+  "$schema_version": 1,
+  "panel": {
+    "name": "EasyISP24 Stream",
+    "version": "1.0.59"
+  },
+  "source_base": "http://103.151.60.162:2122",
+  "list_path": "/watch/list",
+  "play_url_template": "/play/<ID>/index.m3u8?token=<TOKEN>",
+  "auth_mode": "token-query",
+  "auth": {
+    "token_field": "token",
+    "token_expiry_field": "",
+    "token_format": "w.<unix>.<random>",
+    "query_param": "token",
+    "header_name": "X-Token",
+    "cookie_name": "token",
+    "user_agent": "VLC/3.0.20"
+  },
+  "mode": "portal-only",
+  "dest_mode": "proxy-only",
+  "rtmp": {
+    "url": "",
+    "key_secret": "RTMP_KEY"
+  },
+  "proxy": {
+    "base_url": "",
+    "worker_name": "easyisp24-restream",
+    "kv_namespace": "TOKEN_KV",
+    "token_cache_seconds": 300
+  },
+  "site": {
+    "title": "EasyISP24 Restream",
+    "short_title": "EasyISP24",
+    "tagline": "24/7 Live TV - GitHub Actions restream portal",
+    "description": "Auto-refreshing live TV portal: 170 channels, token-aware playlists, health badges and browser players.",
+    "theme": "midnight",
+    "brand_color": "#22d3ee",
+    "accent_color": "#a855f7",
+    "output_dir": "docs",
+    "pages_base": "",
+    "publish_direct_urls": true,
+    "show_all_channels": true
+  },
+  "restream": {
+    "max_parallel": 3,
+    "stagger_seconds": 10,
+    "loop_timeout_seconds": 21000,
+    "job_timeout_minutes": 355,
+    "restart_backoff_seconds": 5,
+    "token_refresh_minutes": 30,
+    "max_backoff_seconds": 120,
+    "ffmpeg_threads": 1
+  },
+  "health": {
+    "concurrency": 8,
+    "timeout_seconds": 12,
+    "retries": 2,
+    "deep_check": true
+  },
+  "schedule": {
+    "token_cron": "17 */6 * * *",
+    "status_cron": "47 */6 * * *",
+    "rotation_cron": "7 */6 * * *",
+    "rotation_slots": 6
+  },
+  "github_free": {
+    "budget_minutes_per_month": 2000,
+    "channels_per_slot": 2,
+    "job_minutes": 340
+  },
+  "selfhosted": {
+    "runner_labels": ["self-hosted", "linux"],
+    "channels_per_runner_slot": 40
+  },
+  "legal": {
+    "notice": "You must own or be licensed to redistribute every channel you restream. Use this project only with sources you are authorised to use."
+  }
+}

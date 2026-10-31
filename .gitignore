@@ -1,0 +1,25 @@
+# secrets - never commit
+token.json
+.env
+.dev.vars
+.wrangler/
+
+# ffmpeg / hls-rehost scratch space
+out/
+streams/
+*.ts
+*.m4s
+*.tmp
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# editors / os
+.DS_Store
+.idea/
+.vscode/
+node_modules/

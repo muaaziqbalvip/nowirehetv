@@ -1,0 +1,55 @@
+# ==============================================================================
+# Token + catalog refresh bot.
+#   - reads /watch/list with exponential backoff
+#   - stores the token in token.json (gitignored) and $GITHUB_ENV (masked)
+#   - rewrites watch_list.json (all channels, online flags, groups)
+#   - regenerates docs/ playlists + portal and the README AUTO blocks
+#   - commits back to the branch with [skip ci]
+# ==============================================================================
+name: _token-refresh
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [refresh-token]
+
+concurrency:
+  group: site-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Refresh token + catalog
+        run: |
+          python3 scripts/refresh_token.py --out watch_list.json --token-out token.json --strict
+          python3 -c "import json;d=json.load(open('watch_list.json'));print(d['channel_count'],'channels /',d['online_count'],'online')"
+
+      - name: Rebuild playlists, portal and README
+        run: |
+          python3 scripts/build_site.py
+          python3 scripts/update_readme.py
+
+      - name: Regenerate the catalog-dependent workflows
+        run: python3 scripts/generate_workflows.py || true
+
+      - name: Commit
+        run: |
+          bash scripts/ci_commit.sh "chore(bot): token + catalog refresh"

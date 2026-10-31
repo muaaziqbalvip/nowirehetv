@@ -1,0 +1,1031 @@
+{
+  "name": "EasyISP24 Stream",
+  "version": "1.0.59",
+  "fetched_at": "2026-10-31T08:39:33Z",
+  "stale": false,
+  "channel_count": 170,
+  "online_count": 101,
+  "channels": [
+    {
+      "id": "bkyl",
+      "name": "asiantvHD",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "bcb3",
+      "name": "Bangla Vision",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "b5jz",
+      "name": "BanglaTV HD",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "b511",
+      "name": "BijoyTV",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "bamp",
+      "name": "BTV Chattagram",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "brwl",
+      "name": "BTV HD",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "bmbq",
+      "name": "Channel I HD",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "b0v8",
+      "name": "Colors Bangla HD",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "bxqa",
+      "name": "Enterr10 Bangla",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "bx72",
+      "name": "Madani TV",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "bhb3",
+      "name": "NTV HD EN-1",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "b5wy",
+      "name": "Ruposhi Bangla",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "bv6p",
+      "name": "SA TV HD",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "brft",
+      "name": "Sony Aath",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "biy1",
+      "name": "Star Bangla",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "bxvd",
+      "name": "Star Jalsha",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "b539",
+      "name": "Sun Bangla HD",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "bl29",
+      "name": "Zee Bangla E",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "byix",
+      "name": "Zee Bangla HD",
+      "group": "Bangla",
+      "online": true
+    },
+    {
+      "id": "bkys",
+      "name": "Colors HD",
+      "group": "Entertainment",
+      "online": true
+    },
+    {
+      "id": "b1y7",
+      "name": "Colors Infinity HD",
+      "group": "Entertainment",
+      "online": true
+    },
+    {
+      "id": "b9zj",
+      "name": "Hum Sitary",
+      "group": "Entertainment",
+      "online": true
+    },
+    {
+      "id": "bvgy",
+      "name": "Sony SET HD",
+      "group": "Entertainment",
+      "online": true
+    },
+    {
+      "id": "blp5",
+      "name": "SRK TV",
+      "group": "Entertainment",
+      "online": true
+    },
+    {
+      "id": "be7u",
+      "name": "Star Plus",
+      "group": "Entertainment",
+      "online": true
+    },
+    {
+      "id": "b8d3",
+      "name": "STAR Plus HD",
+      "group": "Entertainment",
+      "online": true
+    },
+    {
+      "id": "bd11",
+      "name": "Zee TV",
+      "group": "Entertainment",
+      "online": true
+    },
+    {
+      "id": "bups",
+      "name": "Animal Planet",
+      "group": "Infotainment",
+      "online": true
+    },
+    {
+      "id": "bw3c",
+      "name": "Discovery HD",
+      "group": "Infotainment",
+      "online": true
+    },
+    {
+      "id": "b49e",
+      "name": "Discovery Science",
+      "group": "Infotainment",
+      "online": true
+    },
+    {
+      "id": "boee",
+      "name": "History 18",
+      "group": "Infotainment",
+      "online": true
+    },
+    {
+      "id": "b668",
+      "name": "Nat Geo Wild HD",
+      "group": "Infotainment",
+      "online": true
+    },
+    {
+      "id": "befz",
+      "name": "Travelxp HD",
+      "group": "Infotainment",
+      "online": true
+    },
+    {
+      "id": "b7np",
+      "name": "Cartoon Network",
+      "group": "Kids",
+      "online": true
+    },
+    {
+      "id": "bbxp",
+      "name": "Disney International",
+      "group": "Kids",
+      "online": true
+    },
+    {
+      "id": "bdqh",
+      "name": "Disney Jr",
+      "group": "Kids",
+      "online": true
+    },
+    {
+      "id": "b010",
+      "name": "Nick",
+      "group": "Kids",
+      "online": true
+    },
+    {
+      "id": "bu0e",
+      "name": "Nickelodeon",
+      "group": "Kids",
+      "online": true
+    },
+    {
+      "id": "bz5z",
+      "name": "Pogo",
+      "group": "Kids",
+      "online": true
+    },
+    {
+      "id": "bzag",
+      "name": "BANGLA CINEMA",
+      "group": "Movies",
+      "online": true
+    },
+    {
+      "id": "bonc",
+      "name": "ENC 2406",
+      "group": "Movies",
+      "online": true
+    },
+    {
+      "id": "bc4f",
+      "name": "HBO HD",
+      "group": "Movies",
+      "online": true
+    },
+    {
+      "id": "bw4t",
+      "name": "Hits",
+      "group": "Movies",
+      "online": true
+    },
+    {
+      "id": "bxqx",
+      "name": "HITS MOVIES",
+      "group": "Movies",
+      "online": true
+    },
+    {
+      "id": "bt4k",
+      "name": "Jalsha Movies HD",
+      "group": "Movies",
+      "online": true
+    },
+    {
+      "id": "bl8q",
+      "name": "Movies Now HD",
+      "group": "Movies",
+      "online": true
+    },
+    {
+      "id": "be8c",
+      "name": "Star Gold 2 HD",
+      "group": "Movies",
+      "online": true
+    },
+    {
+      "id": "bgqc",
+      "name": "SUPER HIT",
+      "group": "Movies",
+      "online": true
+    },
+    {
+      "id": "bo14",
+      "name": "Zee Cinema HD",
+      "group": "Movies",
+      "online": true
+    },
+    {
+      "id": "bjdd",
+      "name": "Al Jazeera",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "b1xm",
+      "name": "Ananda TV",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "brzr",
+      "name": "ATN Bangla",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "bsmy",
+      "name": "ATN News",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "bw10",
+      "name": "BBC World",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "b3s7",
+      "name": "Boishakhi TV",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "bex9",
+      "name": "BTV NEWS HD",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "bee4",
+      "name": "Channel 24HD",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "ber7",
+      "name": "Channel S",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "byhp",
+      "name": "CNN",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "beed",
+      "name": "DBC NEWS",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "bw0r",
+      "name": "Desh TV",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "bgxr",
+      "name": "Ekattor TV HD",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "b8vx",
+      "name": "EKHON TV",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "bv5s",
+      "name": "Ekushey TV",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "bxlf",
+      "name": "GLOBAL TV HD",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "b96k",
+      "name": "Jamuna Television",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "bgj6",
+      "name": "Mohona TV",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "b3fg",
+      "name": "MYTV HD",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "bo3s",
+      "name": "NEWS24HD",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "bedv",
+      "name": "NEXUS TV",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "b521",
+      "name": "Rtv HD",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "bol1",
+      "name": "SANGSAD TV HD",
+      "group": "News",
+      "online": true
+    },
+    {
+      "id": "bvm6",
+      "name": "ThePapare 1",
+      "group": "Other",
+      "online": true
+    },
+    {
+      "id": "bqg4",
+      "name": "ThePapare 2",
+      "group": "Other",
+      "online": true
+    },
+    {
+      "id": "bkra",
+      "name": "UDP 228.2.2.2:1053 #1907",
+      "group": "Other",
+      "online": true
+    },
+    {
+      "id": "brme",
+      "name": "UDP 228.2.2.2:1062 #2111",
+      "group": "Other",
+      "online": true
+    },
+    {
+      "id": "baeg",
+      "name": "UDP 228.2.2.2:1064 #2811",
+      "group": "Other",
+      "online": true
+    },
+    {
+      "id": "bbtz",
+      "name": "UDP 228.2.2.2:1087 #2813",
+      "group": "Other",
+      "online": true
+    },
+    {
+      "id": "bpwx",
+      "name": "UDP 228.2.2.2:1088 #2812",
+      "group": "Other",
+      "online": true
+    },
+    {
+      "id": "b4au",
+      "name": "UDP 228.2.2.2:1094 #2817",
+      "group": "Other",
+      "online": true
+    },
+    {
+      "id": "btpa",
+      "name": "UDP 228.2.2.2:1103 #2113",
+      "group": "Other",
+      "online": true
+    },
+    {
+      "id": "bsy8",
+      "name": "0001_TSPORTS",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "bo91",
+      "name": "Bein Sport 1",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "bl9s",
+      "name": "Bein Sport 2",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "bry1",
+      "name": "Bein Xtra",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "bqfr",
+      "name": "Eurosport",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "b4q7",
+      "name": "Eurosport HD",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "bemd",
+      "name": "FIFA 2026 Unite8 2 SD",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "bt59",
+      "name": "KSA Sport 1",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "bo87",
+      "name": "PTV-SPORTS-HD",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "bm3w",
+      "name": "SKYNET SPORTS",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "b7cm",
+      "name": "Sony Sports  Ten 1",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "bn59",
+      "name": "Sony Sports 2",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "bdvl",
+      "name": "Star Sports 2 DL",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "bo3x",
+      "name": "Star Sports Select 1 HD",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "bcfe",
+      "name": "Star Sports Select 2 HD",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "bwon",
+      "name": "TEN 3",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "b3b2",
+      "name": "TEN 5 HD",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "bqxt",
+      "name": "Ten Cricket",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "bhm5",
+      "name": "Unite8 SD1",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "boan",
+      "name": "WWE 24*7",
+      "group": "Sports",
+      "online": true
+    },
+    {
+      "id": "bliq",
+      "name": "Colors Bangla HD",
+      "group": "Bangla",
+      "online": false
+    },
+    {
+      "id": "boe4",
+      "name": "Enterr10 Bangla",
+      "group": "Bangla",
+      "online": false
+    },
+    {
+      "id": "bebi",
+      "name": "Ruposhi Bangla",
+      "group": "Bangla",
+      "online": false
+    },
+    {
+      "id": "bwki",
+      "name": "Sony Aath",
+      "group": "Bangla",
+      "online": false
+    },
+    {
+      "id": "b3j8",
+      "name": "Star Bangla",
+      "group": "Bangla",
+      "online": false
+    },
+    {
+      "id": "brfa",
+      "name": "Star Jalsha",
+      "group": "Bangla",
+      "online": false
+    },
+    {
+      "id": "bvv5",
+      "name": "Sun Bangla HD",
+      "group": "Bangla",
+      "online": false
+    },
+    {
+      "id": "b7a8",
+      "name": "Zee Bangla E",
+      "group": "Bangla",
+      "online": false
+    },
+    {
+      "id": "bcaa",
+      "name": "Zee Bangla HD",
+      "group": "Bangla",
+      "online": false
+    },
+    {
+      "id": "b801",
+      "name": "Colors HD",
+      "group": "Entertainment",
+      "online": false
+    },
+    {
+      "id": "bnjd",
+      "name": "Colors Infinity HD",
+      "group": "Entertainment",
+      "online": false
+    },
+    {
+      "id": "bo00",
+      "name": "Hum Sitary",
+      "group": "Entertainment",
+      "online": false
+    },
+    {
+      "id": "b18x",
+      "name": "Sony SET HD",
+      "group": "Entertainment",
+      "online": false
+    },
+    {
+      "id": "bs0g",
+      "name": "SRK TV",
+      "group": "Entertainment",
+      "online": false
+    },
+    {
+      "id": "beu7",
+      "name": "Star Plus",
+      "group": "Entertainment",
+      "online": false
+    },
+    {
+      "id": "bdwg",
+      "name": "STAR Plus HD",
+      "group": "Entertainment",
+      "online": false
+    },
+    {
+      "id": "b84n",
+      "name": "Zee TV",
+      "group": "Entertainment",
+      "online": false
+    },
+    {
+      "id": "bjc1",
+      "name": "Animal Planet",
+      "group": "Infotainment",
+      "online": false
+    },
+    {
+      "id": "bj4m",
+      "name": "History 18",
+      "group": "Infotainment",
+      "online": false
+    },
+    {
+      "id": "bmoe",
+      "name": "Nat Geo Wild HD",
+      "group": "Infotainment",
+      "online": false
+    },
+    {
+      "id": "b96j",
+      "name": "Travelxp HD",
+      "group": "Infotainment",
+      "online": false
+    },
+    {
+      "id": "bcp0",
+      "name": "Cartoon Network",
+      "group": "Kids",
+      "online": false
+    },
+    {
+      "id": "bpbb",
+      "name": "Disney International",
+      "group": "Kids",
+      "online": false
+    },
+    {
+      "id": "bwnh",
+      "name": "Disney Jr",
+      "group": "Kids",
+      "online": false
+    },
+    {
+      "id": "bxyc",
+      "name": "Nick",
+      "group": "Kids",
+      "online": false
+    },
+    {
+      "id": "buon",
+      "name": "Nickelodeon",
+      "group": "Kids",
+      "online": false
+    },
+    {
+      "id": "bse9",
+      "name": "Pogo",
+      "group": "Kids",
+      "online": false
+    },
+    {
+      "id": "b0wm",
+      "name": "BANGLA CINEMA",
+      "group": "Movies",
+      "online": false
+    },
+    {
+      "id": "bi64",
+      "name": "ENC 2406",
+      "group": "Movies",
+      "online": false
+    },
+    {
+      "id": "b37l",
+      "name": "HBO HD",
+      "group": "Movies",
+      "online": false
+    },
+    {
+      "id": "b5wa",
+      "name": "Hits",
+      "group": "Movies",
+      "online": false
+    },
+    {
+      "id": "b9v0",
+      "name": "HITS MOVIES",
+      "group": "Movies",
+      "online": false
+    },
+    {
+      "id": "bzwf",
+      "name": "Jalsha Movies HD",
+      "group": "Movies",
+      "online": false
+    },
+    {
+      "id": "b3yb",
+      "name": "Movies Now HD",
+      "group": "Movies",
+      "online": false
+    },
+    {
+      "id": "bfc4",
+      "name": "Star Gold 2 HD",
+      "group": "Movies",
+      "online": false
+    },
+    {
+      "id": "bt92",
+      "name": "SUPER HIT",
+      "group": "Movies",
+      "online": false
+    },
+    {
+      "id": "bwx6",
+      "name": "Zee Cinema HD",
+      "group": "Movies",
+      "online": false
+    },
+    {
+      "id": "bbei",
+      "name": "Zee Cinema HD",
+      "group": "Movies",
+      "online": false
+    },
+    {
+      "id": "bz7z",
+      "name": "Al Jazeera",
+      "group": "News",
+      "online": false
+    },
+    {
+      "id": "bw05",
+      "name": "BBC World",
+      "group": "News",
+      "online": false
+    },
+    {
+      "id": "bzmd",
+      "name": "CNN",
+      "group": "News",
+      "online": false
+    },
+    {
+      "id": "buvm",
+      "name": "ThePapare 1",
+      "group": "Other",
+      "online": false
+    },
+    {
+      "id": "bksz",
+      "name": "ThePapare 2",
+      "group": "Other",
+      "online": false
+    },
+    {
+      "id": "b38z",
+      "name": "UDP 228.2.2.2:1053 #1907",
+      "group": "Other",
+      "online": false
+    },
+    {
+      "id": "bvfo",
+      "name": "UDP 228.2.2.2:1062 #2111",
+      "group": "Other",
+      "online": false
+    },
+    {
+      "id": "bo7a",
+      "name": "UDP 228.2.2.2:1064 #2811",
+      "group": "Other",
+      "online": false
+    },
+    {
+      "id": "bpfk",
+      "name": "UDP 228.2.2.2:1077 #3219",
+      "group": "Other",
+      "online": false
+    },
+    {
+      "id": "bzjz",
+      "name": "UDP 228.2.2.2:1087 #2813",
+      "group": "Other",
+      "online": false
+    },
+    {
+      "id": "bvjv",
+      "name": "UDP 228.2.2.2:1088 #2812",
+      "group": "Other",
+      "online": false
+    },
+    {
+      "id": "b837",
+      "name": "UDP 228.2.2.2:1094 #2817",
+      "group": "Other",
+      "online": false
+    },
+    {
+      "id": "b1pj",
+      "name": "UDP 228.2.2.2:1103 #2113",
+      "group": "Other",
+      "online": false
+    },
+    {
+      "id": "bob4",
+      "name": "Bein Sport 1",
+      "group": "Sports",
+      "online": false
+    },
+    {
+      "id": "bui7",
+      "name": "Bein Sport 2",
+      "group": "Sports",
+      "online": false
+    },
+    {
+      "id": "bmm9",
+      "name": "Bein Xtra",
+      "group": "Sports",
+      "online": false
+    },
+    {
+      "id": "bae0",
+      "name": "Eurosport",
+      "group": "Sports",
+      "online": false
+    },
+    {
+      "id": "bdfw",
+      "name": "FIFA 2026 Unite8 2 SD",
+      "group": "Sports",
+      "online": false
+    },
+    {
+      "id": "bd1k",
+      "name": "KSA Sport 1",
+      "group": "Sports",
+      "online": false
+    },
+    {
+      "id": "bq5a",
+      "name": "PTV-SPORTS-HD",
+      "group": "Sports",
+      "online": false
+    },
+    {
+      "id": "b5js",
+      "name": "SKYNET SPORTS",
+      "group": "Sports",
+      "online": false
+    },
+    {
+      "id": "bz8n",
+      "name": "Sony Sports  Ten 1",
+      "group": "Sports",
+      "online": false
+    },
+    {
+      "id": "bbym",
+      "name": "Sony Sports 2",
+      "group": "Sports",
+      "online": false
+    },
+    {
+      "id": "bqj2",
+      "name": "Star Sports 2 DL",
+      "group": "Sports",
+      "online": false
+    },
+    {
+      "id": "b77z",
+      "name": "Star Sports Select 1 HD",
+      "group": "Sports",
+      "online": false
+    },
+    {
+      "id": "bi9k",
+      "name": "Star Sports Select 2 HD",
+      "group": "Sports",
+      "online": false
+    },
+    {
+      "id": "b22h",
+      "name": "TEN 3",
+      "group": "Sports",
+      "online": false
+    },
+    {
+      "id": "b1au",
+      "name": "TEN 5 HD",
+      "group": "Sports",
+      "online": false
+    },
+    {
+      "id": "bfxw",
+      "name": "Ten Cricket",
+      "group": "Sports",
+      "online": false
+    },
+    {
+      "id": "b2xt",
+      "name": "Unite8 SD1",
+      "group": "Sports",
+      "online": false
+    },
+    {
+      "id": "bifa",
+      "name": "WWE 24*7",
+      "group": "Sports",
+      "online": false
+    }
+  ],
+  "_note": "Public catalog copy - the live token is never published."
+}

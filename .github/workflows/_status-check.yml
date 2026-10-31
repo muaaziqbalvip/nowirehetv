@@ -1,0 +1,74 @@
+# ==============================================================================
+# Health-check bot.
+#   - probes every channel (master playlist + first variant)
+#   - writes status.json (state, http, latency, variants, bitrate, live window)
+#   - rebuilds the portal so badges/players show the new status
+#   - commits back to the branch with [skip ci]
+# ==============================================================================
+name: _status-check
+
+on:
+  schedule:
+    - cron: "47 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Only probe the first N channels (0 = all)"
+        required: false
+        default: "0"
+  repository_dispatch:
+    types: [status-check]
+
+concurrency:
+  group: site-publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Refresh token (needed for every probe)
+        run: python3 scripts/refresh_token.py --out watch_list.json --token-out token.json
+
+      - name: Probe all channels
+        run: python3 scripts/health_check.py --out status.json --limit "${{ github.event.inputs.limit || 0 }}"
+
+      - name: Rebuild portal + README
+        run: |
+          python3 scripts/build_site.py
+          python3 scripts/update_readme.py
+
+      - name: Commit
+        run: |
+          bash scripts/ci_commit.sh "chore(bot): channel health + status"
+
+      - name: Summary
+        run: |
+          python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          s = json.load(open("status.json"))
+          summary = s["summary"]
+          print("### Channel health\n")
+          print(f"- **{summary['ok']}** / **{summary['total']}** streaming")
+          print(f"- dead: **{summary['dead']}**")
+          print(f"- avg latency: **{summary['avg_latency_ms']} ms**")
+          print(f"- generated: `{s['generated_at']}`")
+          print("\n| Channel | State | HTTP | Latency | Bitrate |")
+          print("| --- | --- | --- | --- | --- |")
+          for cid, c in list(s["channels"].items())[:40]:
+              print(f"| {c['name']} | {c['state']} | {c['http']} | {c.get('latency_ms')} ms | {c.get('bitrate_kbps')} kbps |")
+          PY
