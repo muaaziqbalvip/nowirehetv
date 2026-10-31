@@ -312,7 +312,7 @@ class TestWorkflowGeneration(unittest.TestCase):
         self.assertIn("cron:", body)
         self.assertNotIn("push:", body)                      # no push-triggered streams
         self.assertIn("github.event_name != 'push'", body)    # hard guard anyway
-        self.assertIn('bash scripts/ci_commit.sh "chore(beat): aaa1"', body)
+        self.assertNotIn("ci_commit", body)   # no heartbeat commit noise on main
         self.assertIn("workflow_dispatch", body)
         self.assertEqual(list(disabled.glob("ch-*.yml")), [])
 

@@ -108,13 +108,6 @@ jobs:
         continue-on-error: true
         run: bash scripts/heartbeat.sh "{cid}" "finished"
 
-      - name: Commit heartbeat
-        if: always()
-        continue-on-error: true
-        env:
-          CI_COMMIT_PATHS: ".state"
-        run: |
-          bash scripts/ci_commit.sh "chore(beat): {cid}"
 """
 
 TRIGGER_SCHEDULE = """  schedule:
