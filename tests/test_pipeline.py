@@ -310,7 +310,9 @@ class TestWorkflowGeneration(unittest.TestCase):
         self.assertIn("runs-on: ubuntu-latest", body)
         self.assertIn("timeout-minutes: 355", body)
         self.assertIn("cron:", body)
-        self.assertIn('"data/trigger/aaa1"', body)
+        self.assertNotIn("push:", body)                      # no push-triggered streams
+        self.assertIn("github.event_name != 'push'", body)    # hard guard anyway
+        self.assertIn('bash scripts/ci_commit.sh "chore(beat): aaa1"', body)
         self.assertIn("workflow_dispatch", body)
         self.assertEqual(list(disabled.glob("ch-*.yml")), [])
 

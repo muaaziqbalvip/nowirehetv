@@ -13,9 +13,6 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types: [restart-channel]
-  push:
-    paths:
-      - "data/trigger/bwnh"
 
 concurrency:
   group: ch-bwnh
@@ -28,12 +25,14 @@ jobs:
   restream:
     runs-on: ubuntu-latest
     timeout-minutes: 355
-    # a repository_dispatch may target a single channel
+    # never start from a push (editing this file must not launch a stream),
+    # and a repository_dispatch may target a single channel
     if: >-
-      github.event_name != 'repository_dispatch' ||
-      github.event.client_payload.channel == '' ||
-      github.event.client_payload.channel == 'bwnh' ||
-      github.event.client_payload.channel == null
+      github.event_name != 'push' &&
+      (github.event_name != 'repository_dispatch' ||
+       github.event.client_payload.channel == '' ||
+       github.event.client_payload.channel == 'bwnh' ||
+       github.event.client_payload.channel == null)
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -74,4 +73,5 @@ jobs:
         continue-on-error: true
         env:
           CI_COMMIT_PATHS: ".state"
-        run: bash scripts/ci_commit.sh "chore(beat): bwnh"
+        run: |
+          bash scripts/ci_commit.sh "chore(beat): bwnh"

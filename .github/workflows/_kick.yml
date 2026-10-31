@@ -1,0 +1,57 @@
+# ==============================================================================
+# Start per-channel restream jobs on demand, using the built-in token
+# (workflow_dispatch is exempt from the "no recursive runs" rule).
+#   channels: "be7u" | "be7u b8d3" | "online" | "all"
+# ==============================================================================
+name: _kick
+
+on:
+  workflow_dispatch:
+    inputs:
+      channels:
+        description: 'channel ids separated by spaces, or "online" / "all"'
+        required: true
+        default: "be7u"
+      ref:
+        description: "branch to run the channel workflows on"
+        required: false
+        default: ""
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: kick
+  cancel-in-progress: false
+
+jobs:
+  kick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Dispatch channel workflows
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT: ${{ github.event.inputs.channels }}
+          REF_INPUT: ${{ github.event.inputs.ref }}
+        run: |
+          set -uo pipefail
+          ref="${REF_INPUT:-${GITHUB_REF_NAME}}"
+          case "$INPUT" in
+            all) ids=$(python3 -c 'import json;print(" ".join(c["id"] for c in json.load(open("watch_list.json"))["channels"]))') ;;
+            online) ids=$(python3 -c 'import json;print(" ".join(c["id"] for c in json.load(open("watch_list.json"))["channels"] if c.get("online")))') ;;
+            *) ids="$INPUT" ;;
+          esac
+          count=0
+          for id in $ids; do
+            file=$(ls .github/workflows/ch-"$id"-*.yml 2>/dev/null | head -1 || true)
+            if [ -z "$file" ]; then echo "skip $id (no workflow)"; continue; fi
+            if gh workflow run "$(basename "$file")" --ref "$ref"; then
+              count=$((count + 1)); echo "started $id"
+            fi
+          done
+          echo "### Kicked $count channel workflow(s) on \`$ref\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "GitHub runs about 20 jobs at a time; the rest wait in the queue." >> "$GITHUB_STEP_SUMMARY"

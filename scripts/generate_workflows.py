@@ -64,12 +64,14 @@ jobs:
   restream:
     runs-on: {runs_on}
     timeout-minutes: {job_timeout}
-    # a repository_dispatch may target a single channel
+    # never start from a push (editing this file must not launch a stream),
+    # and a repository_dispatch may target a single channel
     if: >-
-      github.event_name != 'repository_dispatch' ||
-      github.event.client_payload.channel == '' ||
-      github.event.client_payload.channel == '{cid}' ||
-      github.event.client_payload.channel == null
+      github.event_name != 'push' &&
+      (github.event_name != 'repository_dispatch' ||
+       github.event.client_payload.channel == '' ||
+       github.event.client_payload.channel == '{cid}' ||
+       github.event.client_payload.channel == null)
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -111,7 +113,8 @@ jobs:
         continue-on-error: true
         env:
           CI_COMMIT_PATHS: ".state"
-        run: bash scripts/ci_commit.sh "chore(beat): {cid}"
+        run: |
+          bash scripts/ci_commit.sh "chore(beat): {cid}"
 """
 
 TRIGGER_SCHEDULE = """  schedule:
@@ -119,16 +122,6 @@ TRIGGER_SCHEDULE = """  schedule:
   workflow_dispatch:
   repository_dispatch:
     types: [restart-channel]
-"""
-
-TRIGGER_SCHEDULE_KICK = """  schedule:
-    - cron: "{cron}"
-  workflow_dispatch:
-  repository_dispatch:
-    types: [restart-channel]
-  push:
-    paths:
-      - "data/trigger/{cid}"
 """
 
 TRIGGER_MANUAL = """  workflow_dispatch:
@@ -225,7 +218,7 @@ def build_channel_workflow(cfg: dict, channel: dict, mode: str, index: int) -> t
         runs_on = "ubuntu-latest"
         # every channel gets its own minute so 170 cron jobs never pile up
         minute = (int(schedule.get("cron_minutes", [17])[0]) + index * 7) % 60
-        triggers = TRIGGER_SCHEDULE_KICK.format(cron=f"{minute} */6 * * *", cid=channel["id"])
+        triggers = TRIGGER_SCHEDULE.format(cron=f"{minute} */6 * * *")
         scheduled = True
     elif mode == "github-free":
         runs_on = "ubuntu-latest"
