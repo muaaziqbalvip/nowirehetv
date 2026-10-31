@@ -120,11 +120,12 @@ def build_notice(cfg: dict, watch: dict, status: dict) -> str:
     else:
         parts.append(
             '<div class="notice"><span>&#9888;</span><div>'
-            "<strong>HTTPS relay not configured.</strong> The panel is plain HTTP, so browsers block "
-            "direct playback on this HTTPS page (VLC, mpv and TiviMate still work). Deploy "
-            "<code>scripts/proxy_worker.js</code> to Cloudflare Workers, put its URL in "
-            "<code>config.json &rarr; proxy.base_url</code>, then paste it in the field on any channel page. "
-            "Full steps: <a href=\"{{README_URL}}\" style=\"color:inherit\">README &rarr; HTTPS relay</a>."
+            "<strong>Browser playback needs the HTTPS relay.</strong> The panel is plain HTTP, so this "
+            "HTTPS page cannot play it directly (VLC, mpv, TiviMate and OTT Navigator play the M3U links "
+            "perfectly right now). Deploy the free Cloudflare relay - it takes about two minutes - then "
+            "paste its URL below or put it in <code>config.json &rarr; proxy.base_url</code>. "
+            '<a href="https://deploy.workers.cloudflare.com/?url=https://github.com/' + detect_repo() + '" '
+            'style="color:inherit;font-weight:700;text-decoration:underline">Deploy the relay &rarr;</a>'
             "</div></div>"
         )
     if watch.get("stale"):
@@ -352,6 +353,17 @@ def main() -> int:
         ),
     }
     (out / "index.html").write_text(render(read_template("index.html"), mapping), encoding="utf-8")
+
+    # ------------------------------------------------- Pages root compatibility
+    # Many repos keep Pages on "main /" (the default) instead of "main /docs".
+    # Publish a copy of the dashboard at the repo root with <base href="docs/">
+    # so https://<user>.github.io/<repo>/ works with either setting.
+    index_html = (out / "index.html").read_text(encoding="utf-8")
+    if site_cfg(cfg).get("root_copy", True) and out.resolve() == (ROOT / "docs").resolve():
+        root_copy = index_html.replace("<head>", '<head>\n<base href="docs/">', 1)
+        (ROOT / "index.html").write_text(root_copy, encoding="utf-8")
+        (ROOT / ".nojekyll").write_text("", encoding="utf-8")
+        (ROOT / "404.html").write_text(render(read_template("root404.html"), mapping), encoding="utf-8")
 
     # --------------------------------------------------------- channel players
     channel_tpl = read_template("channel.html")

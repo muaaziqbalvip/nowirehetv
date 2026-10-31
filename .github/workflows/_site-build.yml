@@ -10,7 +10,7 @@ on:
       - "config.json"
       - "templates/**"
       - "scripts/**"
-      - "data/**"
+      - "data/seed_channels.txt"
       - "watch_list.json"
       - "status.json"
       - "README.md"

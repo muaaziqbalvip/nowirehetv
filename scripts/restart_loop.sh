@@ -152,6 +152,9 @@ run_pull() {
   esac
 }
 
+token_fails=0
+max_token_fails=${MAX_TOKEN_FAILS:-5}
+
 started=$(date +%s)
 deadline=$((started + LOOP_TIMEOUT))
 backoff=$BACKOFF_START
@@ -177,11 +180,18 @@ while :; do
     refresh_token || true
   fi
   if [ -z "$TOKEN" ]; then
-    log "no token available - sleeping ${backoff}s"
+    token_fails=$((token_fails + 1))
+    if [ "$token_fails" -ge "$max_token_fails" ]; then
+      log "::error::panel unreachable after $token_fails attempts - stopping instead of burning the runner"
+      state_write "no-token" "$restarts" "panel list endpoint unreachable"
+      break
+    fi
+    log "no token available (attempt $token_fails/$max_token_fails) - sleeping ${backoff}s"
     sleep "$backoff"
     backoff=$(( backoff * 2 > BACKOFF_MAX ? BACKOFF_MAX : backoff * 2 ))
     continue
   fi
+  token_fails=0
 
   url="$(build_url)"
   log "pulling $BASE/play/$CHANNEL_ID/... (dest=$DEST_MODE)"

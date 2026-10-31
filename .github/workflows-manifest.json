@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-31T08:39:35Z",
-  "mode": "portal-only",
+  "generated_at": "2026-10-31T09:13:56Z",
+  "mode": "github-hosted",
   "dest_mode": "proxy-only",
-  "active_directory": ".github/workflows.disabled",
+  "active_directory": ".github/workflows",
   "channels": 170,
-  "scheduled_workflows": 0,
+  "scheduled_workflows": 170,
   "rotation": "_matrix-rotation.yml"
 }

@@ -17,7 +17,7 @@
     "cookie_name": "token",
     "user_agent": "VLC/3.0.20"
   },
-  "mode": "portal-only",
+  "mode": "github-hosted",
   "dest_mode": "proxy-only",
   "rtmp": {
     "url": "",
@@ -38,9 +38,11 @@
     "brand_color": "#22d3ee",
     "accent_color": "#a855f7",
     "output_dir": "docs",
-    "pages_base": "",
+    "pages_base": "https://muaaziqbalvip.github.io/nowirehetv/docs",
     "publish_direct_urls": true,
-    "show_all_channels": true
+    "show_all_channels": true,
+    "root_copy": true,
+    "portal_url": "https://muaaziqbalvip.github.io/nowirehetv"
   },
   "restream": {
     "max_parallel": 3,
@@ -50,7 +52,8 @@
     "restart_backoff_seconds": 5,
     "token_refresh_minutes": 30,
     "max_backoff_seconds": 120,
-    "ffmpeg_threads": 1
+    "ffmpeg_threads": 1,
+    "cron_stagger": true
   },
   "health": {
     "concurrency": 8,
@@ -70,7 +73,10 @@
     "job_minutes": 340
   },
   "selfhosted": {
-    "runner_labels": ["self-hosted", "linux"],
+    "runner_labels": [
+      "self-hosted",
+      "linux"
+    ],
     "channels_per_runner_slot": 40
   },
   "legal": {
