@@ -9,8 +9,11 @@ Reads config.json + watch_list.json and writes:
 
 Modes (config.json -> mode):
 
-  selfhosted   cron + self-hosted runner labels, all channels stream 24/7
-  github-free  dispatch-only per-channel workflows, cron on the rotation job
+  selfhosted    cron + self-hosted runner labels, all channels stream 24/7
+  github-hosted ONE ACTIVE 24/7 workflow per channel on ubuntu-latest (cron +
+               manual + repository_dispatch + a per-channel push kick). Free
+               and unlimited for public repos, but capped at 20 concurrent jobs.
+  github-free   dispatch-only per-channel workflows, cron on the rotation job
                (fits inside the 2,000 min/month free budget)
   portal-only  no active streaming workflows at all - near-zero minutes,
                the catalog/playlists/portal still refresh every 6 hours
@@ -72,9 +75,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Refresh panel token
+        continue-on-error: true
         run: |
-          python3 scripts/refresh_token.py --out watch_list.json
-          echo "token refreshed at $(date -u +%H:%M:%S)"
+          python3 scripts/refresh_token.py --out watch_list.json || \
+            echo "::warning::token refresh failed - the loop will retry every 30s"
 
       - name: Channel availability
         id: availability
@@ -108,6 +112,16 @@ TRIGGER_SCHEDULE = """  schedule:
   workflow_dispatch:
   repository_dispatch:
     types: [restart-channel]
+"""
+
+TRIGGER_SCHEDULE_KICK = """  schedule:
+    - cron: "{cron}"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [restart-channel]
+  push:
+    paths:
+      - "data/trigger/{cid}"
 """
 
 TRIGGER_MANUAL = """  workflow_dispatch:
@@ -200,6 +214,12 @@ def build_channel_workflow(cfg: dict, channel: dict, mode: str, index: int) -> t
         runs_on = "[" + ", ".join(cfg.get("selfhosted", {}).get("runner_labels", ["self-hosted", "linux"])) + "]"
         triggers = TRIGGER_SCHEDULE.format(cron=cron)
         scheduled = True
+    elif mode == "github-hosted":
+        runs_on = "ubuntu-latest"
+        # every channel gets its own minute so 170 cron jobs never pile up
+        minute = (int(schedule.get("cron_minutes", [17])[0]) + index * 7) % 60
+        triggers = TRIGGER_SCHEDULE_KICK.format(cron=f"{minute} */6 * * *", cid=channel["id"])
+        scheduled = True
     elif mode == "github-free":
         runs_on = "ubuntu-latest"
         triggers = TRIGGER_MANUAL
@@ -231,7 +251,7 @@ def build_rotation_workflow(cfg: dict, mode: str) -> str:
     restream = cfg.get("restream", {}) or {}
     free = cfg.get("github_free", {}) or {}
 
-    cron_active = mode in ("github-free", "selfhosted")
+    cron_active = mode in ("github-free", "selfhosted", "github-hosted")
     triggers = (
         f'  schedule:\n    - cron: "{schedule.get("rotation_cron", "7 */6 * * *")}"\n'
         "  workflow_dispatch:\n"
@@ -268,8 +288,8 @@ def main() -> int:
 
     cfg = load_config(args.config)
     mode = (args.mode or cfg.get("mode") or "portal-only").lower()
-    if mode not in ("selfhosted", "github-free", "portal-only"):
-        print(f"::error::unknown mode '{mode}' (expected selfhosted | github-free | portal-only)")
+    if mode not in ("selfhosted", "github-hosted", "github-free", "portal-only"):
+        print(f"::error::unknown mode '{mode}' (expected selfhosted | github-hosted | github-free | portal-only)")
         return 2
 
     watch = load_watch_list()
@@ -320,6 +340,10 @@ def main() -> int:
 
     if mode == "portal-only":
         (DISABLED / "README.md").write_text(DISABLED_NOTE, encoding="utf-8")
+    else:
+        stale_note = DISABLED / "README.md"
+        if stale_note.exists():
+            stale_note.unlink()
 
     save_manifest = {
         "generated_at": __import__("common").now_iso(),

@@ -144,11 +144,15 @@ class TestHelpers(unittest.TestCase):
         self.assertIsNone(common.token_expiry("nope"))
 
     def test_pages_base(self):
-        self.assertEqual(common.pages_base(CONFIG, "me/myrepo"), "https://me.github.io/myrepo")
-        self.assertEqual(common.pages_base(CONFIG, "me/me.github.io"), "https://me.github.io")
         cfg = json.loads(json.dumps(CONFIG))
+        cfg["site"]["pages_base"] = ""
+        self.assertEqual(common.pages_base(cfg, "me/myrepo"), "https://me.github.io/myrepo")
+        self.assertEqual(common.pages_base(cfg, "me/me.github.io"), "https://me.github.io")
         cfg["site"]["pages_base"] = "https://tv.example.com/"
         self.assertEqual(common.pages_base(cfg, "me/myrepo"), "https://tv.example.com")
+        # an explicit pages_base (site served from /docs) always wins
+        self.assertEqual(common.pages_base(CONFIG, "me/myrepo"),
+                         (CONFIG["site"]["pages_base"] or "https://me.github.io/myrepo").rstrip("/"))
 
     def test_public_stream_url_priority(self):
         cfg = json.loads(json.dumps(CONFIG))
@@ -298,6 +302,18 @@ class TestWorkflowGeneration(unittest.TestCase):
         self.assertIn("cron:", rotation)
         self.assertIn("fromJson(needs.plan.outputs.channels)", rotation)
 
+    def test_github_hosted_is_active_with_cron_and_kick(self):
+        wf, disabled = self._run("github-hosted")
+        files = sorted(p.name for p in wf.glob("ch-*.yml"))
+        self.assertEqual(len(files), 3)
+        body = (wf / "ch-aaa1-alpha-one.yml").read_text(encoding="utf-8")
+        self.assertIn("runs-on: ubuntu-latest", body)
+        self.assertIn("timeout-minutes: 355", body)
+        self.assertIn("cron:", body)
+        self.assertIn('"data/trigger/aaa1"', body)
+        self.assertIn("workflow_dispatch", body)
+        self.assertEqual(list(disabled.glob("ch-*.yml")), [])
+
     def test_portal_only_is_inert(self):
         wf, disabled = self._run("portal-only")
         self.assertEqual(list(wf.glob("ch-*.yml")), [])
@@ -325,7 +341,10 @@ class TestReadme(unittest.TestCase):
                 "<!-- AUTO:CATALOG:START -->\n<!-- AUTO:CATALOG:END -->\n",
                 encoding="utf-8",
             )
-            with mock.patch.object(sys, "argv", ["update_readme.py", "--readme", str(readme), "--branch", "main"]):
+            cfg = json.loads(json.dumps(CONFIG))
+            cfg["site"]["pages_base"] = ""   # let the repo derive it
+            with mock.patch.object(update_readme, "load_config", lambda *a, **k: cfg), \
+                 mock.patch.object(sys, "argv", ["update_readme.py", "--readme", str(readme), "--branch", "main"]):
                 self.assertEqual(update_readme.main(), 0)
             text = readme.read_text(encoding="utf-8")
             self.assertIn("capsule-render", text)
