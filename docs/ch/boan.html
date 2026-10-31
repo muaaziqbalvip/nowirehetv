@@ -203,11 +203,20 @@
     attach();
   });
 
-  if (location.protocol === "https:" && currentUrl().indexOf("http://") === 0) {
-    showMessage("This stream is plain HTTP",
-      "Mixed content is blocked on HTTPS pages. VLC/ffmpeg can still play it; deploy the Cloudflare relay for browser playback, then paste the relay URL on the right.");
+  function boot() {
+    if (location.protocol === "https:" && currentUrl().indexOf("http://") === 0) {
+      showMessage("This stream is plain HTTP",
+        "Mixed content is blocked on HTTPS pages. VLC/ffmpeg can still play it; deploy the Cloudflare relay for browser playback, then paste the relay URL on the right.");
+    } else {
+      attach();
+    }
+  }
+
+  // site.js is deferred: wait for it so the saved relay URL is applied first
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
   } else {
-    attach();
+    boot();
   }
 })();
 </script>

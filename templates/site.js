@@ -90,6 +90,22 @@
     requestAnimationFrame(step);
   });
 
+  /* proxy override -------------------------------------------------------- */
+  var proxyInput = document.getElementById("proxy-base");
+  if (proxyInput) {
+    proxyInput.value = storedProxy() || CONFIG.proxy || "";
+    var save = function () {
+      try { localStorage.setItem(LS_KEY, proxyInput.value.trim()); } catch (e) {}
+      location.reload();
+    };
+    proxyInput.addEventListener("change", save);
+    var clearBtn = document.getElementById("proxy-clear");
+    if (clearBtn) clearBtn.addEventListener("click", function () {
+      try { localStorage.removeItem(LS_KEY); } catch (e) {}
+      location.reload();
+    });
+  }
+
   /* dashboard filtering ---------------------------------------------------- */
   var grid = document.getElementById("channel-grid");
   if (!grid) return;
@@ -142,22 +158,6 @@
       apply();
     });
   });
-
-  /* proxy override -------------------------------------------------------- */
-  var proxyInput = document.getElementById("proxy-base");
-  if (proxyInput) {
-    proxyInput.value = storedProxy() || CONFIG.proxy || "";
-    var save = function () {
-      try { localStorage.setItem(LS_KEY, proxyInput.value.trim()); } catch (e) {}
-      location.reload();
-    };
-    proxyInput.addEventListener("change", save);
-    var clearBtn = document.getElementById("proxy-clear");
-    if (clearBtn) clearBtn.addEventListener("click", function () {
-      try { localStorage.removeItem(LS_KEY); } catch (e) {}
-      location.reload();
-    });
-  }
 
   apply();
 })();

@@ -81,7 +81,7 @@ flowchart LR
 | **Panel reports online** | `101` |
 | **Average probe latency** | _pending first health check_ |
 | **Best bitrate** | _pending first health check_ |
-| **Catalog refreshed** | `2026-10-31T08:39:33Z` (1m ago) |
+| **Catalog refreshed** | `2026-10-31T08:39:33Z` (2m ago) |
 | **Portal URL** | [**muaaziqbalvip.github.io/nowirehetv**](https://muaaziqbalvip.github.io/nowirehetv) |
 | **Relay (https layer)** | _not configured - direct links are plain HTTP_ |
 
