@@ -1,3 +1,3 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="b1au" tvg-name="TEN 5 HD" tvg-logo="" group-title="Sports",TEN 5 HD
-http://103.151.60.162:2122/play/b1au/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8
+#EXTINF:-1 tvg-id="b1au" tvg-name="TEN 5 HD" tvg-logo="" group-title="Network",TEN 5 HD
+http://103.151.60.162:2122/play/b1au/index.m3u8?token=w.1793551942.NRNwZxvg1jcVWJCtl-7JdS

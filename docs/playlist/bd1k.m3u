@@ -1,3 +1,3 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="bd1k" tvg-name="KSA Sport 1" tvg-logo="" group-title="Sports",KSA Sport 1
-http://103.151.60.162:2122/play/bd1k/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8
+#EXTINF:-1 tvg-id="bd1k" tvg-name="KSA Sport 1" tvg-logo="" group-title="Network",KSA Sport 1
+http://103.151.60.162:2122/play/bd1k/index.m3u8?token=w.1793551942.NRNwZxvg1jcVWJCtl-7JdS

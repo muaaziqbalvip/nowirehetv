@@ -32,7 +32,7 @@
         <div class="avatar" aria-hidden="true">C2</div>
         <div>
           <h1 style="margin:0;font-size:1.5rem;letter-spacing:-.03em">Channel 24HD</h1>
-          <div class="card-sub">bee4 &middot; News &middot; EasyISP24 Stream v1.0.59</div>
+          <div class="card-sub">bee4 &middot; Network &middot; EasyISP24 Stream v1.0.59</div>
         </div>
         <div class="card-meta" style="margin-left:auto"><span class="badge live"><span class="dot on"></span>Live</span><span class="badge brand">panel: online</span></div>
       </div>
@@ -59,9 +59,9 @@
       </div>
 
       <div class="link-box">
-        <input id="stream-url" readonly value="http://103.151.60.162:2122/play/bee4/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8" aria-label="Stream URL">
+        <input id="stream-url" readonly value="http://103.151.60.162:2122/play/bee4/index.m3u8?token=w.1793551942.NRNwZxvg1jcVWJCtl-7JdS" aria-label="Stream URL">
         <button class="btn ghost" type="button" data-copy="stream" data-id="bee4" title="Copy stream URL">&#10697; Copy</button>
-        <a class="btn ghost" href="http://103.151.60.162:2122/play/bee4/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8" target="_blank" rel="noopener" title="Open the raw playlist">Raw</a>
+        <a class="btn ghost" href="http://103.151.60.162:2122/play/bee4/index.m3u8?token=w.1793551942.NRNwZxvg1jcVWJCtl-7JdS" target="_blank" rel="noopener" title="Open the raw playlist">Raw</a>
       </div>
 
       <p class="mono" style="color:var(--muted);margin-top:10px">No relay configured: the stream URL above is the panel URL itself. Paste it into VLC, mpv, TiviMate or OTT Navigator.</p>
@@ -110,11 +110,11 @@
 
 <footer class="site">
   <div class="wrap">
-    EasyISP24 Restream &middot; built 2026-10-31T08:39:33Z &middot; unofficial portal, authorised use only
+    EasyISP24 Restream &middot; built 2026-11-01T04:52:22Z &middot; unofficial portal, authorised use only
   </div>
 </footer>
 
-<script id="site-config" type="application/json">{"proxy":"","channels":[{"id":"bee4","name":"Channel 24HD","group":"News","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bee4/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8"}]}</script>
+<script id="site-config" type="application/json">{"proxy":"","channels":[{"id":"bee4","name":"Channel 24HD","group":"Network","online":true,"state":"ok","stream_url":"http://103.151.60.162:2122/play/bee4/index.m3u8?token=w.1793551942.NRNwZxvg1jcVWJCtl-7JdS"}]}</script>
 <script src="https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js"></script>
 <script src="../assets/site.js" defer></script>
 <script>
@@ -132,7 +132,7 @@
   function currentUrl() {
     var base = window.EasyISP ? window.EasyISP.proxyBase() : "";
     if (base) return base + "/live/bee4.m3u8";
-    return "http://103.151.60.162:2122/play/bee4/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8";
+    return "http://103.151.60.162:2122/play/bee4/index.m3u8?token=w.1793551942.NRNwZxvg1jcVWJCtl-7JdS";
   }
 
   function showMessage(title, detail) {

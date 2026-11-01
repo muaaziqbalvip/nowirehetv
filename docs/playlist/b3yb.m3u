@@ -1,3 +1,3 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="b3yb" tvg-name="Movies Now HD" tvg-logo="" group-title="Movies",Movies Now HD
-http://103.151.60.162:2122/play/b3yb/index.m3u8?token=w.1793478329.mkkNkz93oHpmAmUESwlnG8
+#EXTINF:-1 tvg-id="b3yb" tvg-name="Movies Now HD" tvg-logo="" group-title="Network",Movies Now HD
+http://103.151.60.162:2122/play/b3yb/index.m3u8?token=w.1793551942.NRNwZxvg1jcVWJCtl-7JdS
