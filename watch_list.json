@@ -3,12 +3,12 @@
   "version": "1.0.59",
   "source_base": "http://103.151.60.162:2122",
   "list_path": "/watch/list",
-  "fetched_at": "2026-11-01T04:52:22Z",
+  "fetched_at": "2026-11-06T02:51:09Z",
   "stale": false,
   "token_present": true,
-  "channel_count": 170,
-  "online_count": 101,
-  "offline_count": 69,
+  "channel_count": 186,
+  "online_count": 183,
+  "offline_count": 3,
   "buffer": 30,
   "channels": [
     {
@@ -18,6 +18,14 @@
       "logo": "",
       "online": true,
       "slug": "0001-tsports-bsy8"
+    },
+    {
+      "id": "bz7z",
+      "name": "Al Jazeera",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "al-jazeera-bz7z"
     },
     {
       "id": "bjdd",
@@ -36,20 +44,20 @@
       "slug": "ananda-tv-b1xm"
     },
     {
+      "id": "bjc1",
+      "name": "Animal Planet",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "animal-planet-bjc1"
+    },
+    {
       "id": "bups",
       "name": "Animal Planet",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "animal-planet-bups"
-    },
-    {
-      "id": "bkyl",
-      "name": "asiantvHD",
-      "group": "Network",
-      "logo": "",
-      "online": true,
-      "slug": "asiantvhd-bkyl"
     },
     {
       "id": "brzr",
@@ -66,6 +74,14 @@
       "logo": "",
       "online": true,
       "slug": "atn-news-bsmy"
+    },
+    {
+      "id": "b0wm",
+      "name": "BANGLA CINEMA",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "bangla-cinema-b0wm"
     },
     {
       "id": "bzag",
@@ -92,12 +108,28 @@
       "slug": "banglatv-hd-b5jz"
     },
     {
+      "id": "bw05",
+      "name": "BBC World",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "bbc-world-bw05"
+    },
+    {
       "id": "bw10",
       "name": "BBC World",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "bbc-world-bw10"
+    },
+    {
+      "id": "bob4",
+      "name": "Bein Sport 1",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "bein-sport-1-bob4"
     },
     {
       "id": "bo91",
@@ -108,12 +140,28 @@
       "slug": "bein-sport-1-bo91"
     },
     {
+      "id": "bui7",
+      "name": "Bein Sport 2",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "bein-sport-2-bui7"
+    },
+    {
       "id": "bl9s",
       "name": "Bein Sport 2",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "bein-sport-2-bl9s"
+    },
+    {
+      "id": "bmm9",
+      "name": "Bein Xtra",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "bein-xtra-bmm9"
     },
     {
       "id": "bry1",
@@ -164,6 +212,14 @@
       "slug": "btv-news-hd-bex9"
     },
     {
+      "id": "bcp0",
+      "name": "Cartoon Network",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "cartoon-network-bcp0"
+    },
+    {
       "id": "b7np",
       "name": "Cartoon Network",
       "group": "Network",
@@ -196,12 +252,28 @@
       "slug": "channel-s-ber7"
     },
     {
+      "id": "bzmd",
+      "name": "CNN",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "cnn-bzmd"
+    },
+    {
       "id": "byhp",
       "name": "CNN",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "cnn-byhp"
+    },
+    {
+      "id": "bliq",
+      "name": "Colors Bangla HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "colors-bangla-hd-bliq"
     },
     {
       "id": "b0v8",
@@ -212,12 +284,28 @@
       "slug": "colors-bangla-hd-b0v8"
     },
     {
+      "id": "b801",
+      "name": "Colors HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "colors-hd-b801"
+    },
+    {
       "id": "bkys",
       "name": "Colors HD",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "colors-hd-bkys"
+    },
+    {
+      "id": "bnjd",
+      "name": "Colors Infinity HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "colors-infinity-hd-bnjd"
     },
     {
       "id": "b1y7",
@@ -260,12 +348,36 @@
       "slug": "discovery-science-b49e"
     },
     {
+      "id": "b7yb",
+      "name": "Discovery Science",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "discovery-science-b7yb"
+    },
+    {
+      "id": "bpbb",
+      "name": "Disney International",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "disney-international-bpbb"
+    },
+    {
       "id": "bbxp",
       "name": "Disney International",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "disney-international-bbxp"
+    },
+    {
+      "id": "bwnh",
+      "name": "Disney Jr",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "disney-jr-bwnh"
     },
     {
       "id": "bdqh",
@@ -300,6 +412,14 @@
       "slug": "ekushey-tv-bv5s"
     },
     {
+      "id": "bi64",
+      "name": "ENC 2406",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "enc-2406-bi64"
+    },
+    {
       "id": "bonc",
       "name": "ENC 2406",
       "group": "Network",
@@ -308,12 +428,28 @@
       "slug": "enc-2406-bonc"
     },
     {
+      "id": "boe4",
+      "name": "Enterr10 Bangla",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "enterr10-bangla-boe4"
+    },
+    {
       "id": "bxqa",
       "name": "Enterr10 Bangla",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "enterr10-bangla-bxqa"
+    },
+    {
+      "id": "bae0",
+      "name": "Eurosport",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "eurosport-bae0"
     },
     {
       "id": "bqfr",
@@ -332,6 +468,14 @@
       "slug": "eurosport-hd-b4q7"
     },
     {
+      "id": "b0c3",
+      "name": "Eurosport HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "eurosport-hd-b0c3"
+    },
+    {
       "id": "bemd",
       "name": "FIFA 2026 Unite8 2 SD",
       "group": "Network",
@@ -348,12 +492,28 @@
       "slug": "global-tv-hd-bxlf"
     },
     {
+      "id": "b37l",
+      "name": "HBO HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "hbo-hd-b37l"
+    },
+    {
       "id": "bc4f",
       "name": "HBO HD",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "hbo-hd-bc4f"
+    },
+    {
+      "id": "bj4m",
+      "name": "History 18",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "history-18-bj4m"
     },
     {
       "id": "boee",
@@ -364,12 +524,28 @@
       "slug": "history-18-boee"
     },
     {
+      "id": "b5wa",
+      "name": "Hits",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "hits-b5wa"
+    },
+    {
       "id": "bw4t",
       "name": "Hits",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "hits-bw4t"
+    },
+    {
+      "id": "b9v0",
+      "name": "HITS MOVIES",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "hits-movies-b9v0"
     },
     {
       "id": "bxqx",
@@ -380,12 +556,28 @@
       "slug": "hits-movies-bxqx"
     },
     {
+      "id": "bo00",
+      "name": "Hum Sitary",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "hum-sitary-bo00"
+    },
+    {
       "id": "b9zj",
       "name": "Hum Sitary",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "hum-sitary-b9zj"
+    },
+    {
+      "id": "bzwf",
+      "name": "Jalsha Movies HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "jalsha-movies-hd-bzwf"
     },
     {
       "id": "bt4k",
@@ -402,6 +594,14 @@
       "logo": "",
       "online": true,
       "slug": "jamuna-television-b96k"
+    },
+    {
+      "id": "bd1k",
+      "name": "KSA Sport 1",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "ksa-sport-1-bd1k"
     },
     {
       "id": "bt59",
@@ -428,6 +628,14 @@
       "slug": "mohona-tv-bgj6"
     },
     {
+      "id": "b3yb",
+      "name": "Movies Now HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "movies-now-hd-b3yb"
+    },
+    {
       "id": "bl8q",
       "name": "Movies Now HD",
       "group": "Network",
@@ -442,6 +650,14 @@
       "logo": "",
       "online": true,
       "slug": "mytv-hd-b3fg"
+    },
+    {
+      "id": "bmoe",
+      "name": "Nat Geo Wild HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "nat-geo-wild-hd-bmoe"
     },
     {
       "id": "b668",
@@ -468,12 +684,28 @@
       "slug": "nexus-tv-bedv"
     },
     {
+      "id": "bxyc",
+      "name": "Nick",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "nick-bxyc"
+    },
+    {
       "id": "b010",
       "name": "Nick",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "nick-b010"
+    },
+    {
+      "id": "buon",
+      "name": "Nickelodeon",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "nickelodeon-buon"
     },
     {
       "id": "bu0e",
@@ -492,12 +724,28 @@
       "slug": "ntv-hd-en-1-bhb3"
     },
     {
+      "id": "bse9",
+      "name": "Pogo",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "pogo-bse9"
+    },
+    {
       "id": "bz5z",
       "name": "Pogo",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "pogo-bz5z"
+    },
+    {
+      "id": "bq5a",
+      "name": "PTV-SPORTS-HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "ptv-sports-hd-bq5a"
     },
     {
       "id": "bo87",
@@ -516,20 +764,20 @@
       "slug": "rtv-hd-b521"
     },
     {
+      "id": "bebi",
+      "name": "Ruposhi Bangla",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "ruposhi-bangla-bebi"
+    },
+    {
       "id": "b5wy",
       "name": "Ruposhi Bangla",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "ruposhi-bangla-b5wy"
-    },
-    {
-      "id": "bv6p",
-      "name": "SA TV HD",
-      "group": "Network",
-      "logo": "",
-      "online": true,
-      "slug": "sa-tv-hd-bv6p"
     },
     {
       "id": "bol1",
@@ -540,12 +788,28 @@
       "slug": "sangsad-tv-hd-bol1"
     },
     {
+      "id": "b5js",
+      "name": "SKYNET SPORTS",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "skynet-sports-b5js"
+    },
+    {
       "id": "bm3w",
       "name": "SKYNET SPORTS",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "skynet-sports-bm3w"
+    },
+    {
+      "id": "bwki",
+      "name": "Sony Aath",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "sony-aath-bwki"
     },
     {
       "id": "brft",
@@ -556,12 +820,28 @@
       "slug": "sony-aath-brft"
     },
     {
+      "id": "b18x",
+      "name": "Sony SET HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "sony-set-hd-b18x"
+    },
+    {
       "id": "bvgy",
       "name": "Sony SET HD",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "sony-set-hd-bvgy"
+    },
+    {
+      "id": "bz8n",
+      "name": "Sony Sports  Ten 1",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "sony-sports-ten-1-bz8n"
     },
     {
       "id": "b7cm",
@@ -572,12 +852,28 @@
       "slug": "sony-sports-ten-1-b7cm"
     },
     {
+      "id": "bbym",
+      "name": "Sony Sports 2",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "sony-sports-2-bbym"
+    },
+    {
       "id": "bn59",
       "name": "Sony Sports 2",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "sony-sports-2-bn59"
+    },
+    {
+      "id": "bs0g",
+      "name": "SRK TV",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "srk-tv-bs0g"
     },
     {
       "id": "blp5",
@@ -588,12 +884,28 @@
       "slug": "srk-tv-blp5"
     },
     {
+      "id": "b3j8",
+      "name": "Star Bangla",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "star-bangla-b3j8"
+    },
+    {
       "id": "biy1",
       "name": "Star Bangla",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "star-bangla-biy1"
+    },
+    {
+      "id": "bfc4",
+      "name": "Star Gold 2 HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "star-gold-2-hd-bfc4"
     },
     {
       "id": "be8c",
@@ -604,12 +916,44 @@
       "slug": "star-gold-2-hd-be8c"
     },
     {
+      "id": "btmz",
+      "name": "STAR GOLD HD - Rs 19.00",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "star-gold-hd-rs-19-00-btmz"
+    },
+    {
+      "id": "bh2u",
+      "name": "STAR GOLD HD - Rs 19.00",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "star-gold-hd-rs-19-00-bh2u"
+    },
+    {
+      "id": "brfa",
+      "name": "Star Jalsha",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "star-jalsha-brfa"
+    },
+    {
       "id": "bxvd",
       "name": "Star Jalsha",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "star-jalsha-bxvd"
+    },
+    {
+      "id": "beu7",
+      "name": "Star Plus",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "star-plus-beu7"
     },
     {
       "id": "be7u",
@@ -620,12 +964,44 @@
       "slug": "star-plus-be7u"
     },
     {
+      "id": "bdwg",
+      "name": "STAR Plus HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "star-plus-hd-bdwg"
+    },
+    {
       "id": "b8d3",
       "name": "STAR Plus HD",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "star-plus-hd-b8d3"
+    },
+    {
+      "id": "brb2",
+      "name": "STar Spor 3",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "star-spor-3-brb2"
+    },
+    {
+      "id": "brdb",
+      "name": "STar Spor 3",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "star-spor-3-brdb"
+    },
+    {
+      "id": "bqj2",
+      "name": "Star Sports 2 DL",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "star-sports-2-dl-bqj2"
     },
     {
       "id": "bdvl",
@@ -636,12 +1012,28 @@
       "slug": "star-sports-2-dl-bdvl"
     },
     {
+      "id": "b77z",
+      "name": "Star Sports Select 1 HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "star-sports-select-1-hd-b77z"
+    },
+    {
       "id": "bo3x",
       "name": "Star Sports Select 1 HD",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "star-sports-select-1-hd-bo3x"
+    },
+    {
+      "id": "bi9k",
+      "name": "Star Sports Select 2 HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "star-sports-select-2-hd-bi9k"
     },
     {
       "id": "bcfe",
@@ -652,12 +1044,28 @@
       "slug": "star-sports-select-2-hd-bcfe"
     },
     {
+      "id": "bvv5",
+      "name": "Sun Bangla HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "sun-bangla-hd-bvv5"
+    },
+    {
       "id": "b539",
       "name": "Sun Bangla HD",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "sun-bangla-hd-b539"
+    },
+    {
+      "id": "bt92",
+      "name": "SUPER HIT",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "super-hit-bt92"
     },
     {
       "id": "bgqc",
@@ -668,12 +1076,28 @@
       "slug": "super-hit-bgqc"
     },
     {
+      "id": "b22h",
+      "name": "TEN 3",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "ten-3-b22h"
+    },
+    {
       "id": "bwon",
       "name": "TEN 3",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "ten-3-bwon"
+    },
+    {
+      "id": "b1au",
+      "name": "TEN 5 HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "ten-5-hd-b1au"
     },
     {
       "id": "b3b2",
@@ -684,12 +1108,28 @@
       "slug": "ten-5-hd-b3b2"
     },
     {
+      "id": "bfxw",
+      "name": "Ten Cricket",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "ten-cricket-bfxw"
+    },
+    {
       "id": "bqxt",
       "name": "Ten Cricket",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "ten-cricket-bqxt"
+    },
+    {
+      "id": "buvm",
+      "name": "ThePapare 1",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "thepapare-1-buvm"
     },
     {
       "id": "bvm6",
@@ -700,12 +1140,28 @@
       "slug": "thepapare-1-bvm6"
     },
     {
+      "id": "bksz",
+      "name": "ThePapare 2",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "thepapare-2-bksz"
+    },
+    {
       "id": "bqg4",
       "name": "ThePapare 2",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "thepapare-2-bqg4"
+    },
+    {
+      "id": "b96j",
+      "name": "Travelxp HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "travelxp-hd-b96j"
     },
     {
       "id": "befz",
@@ -716,12 +1172,28 @@
       "slug": "travelxp-hd-befz"
     },
     {
+      "id": "b38z",
+      "name": "UDP 228.2.2.2:1053 #1907",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-1053-1907-b38z"
+    },
+    {
       "id": "bkra",
       "name": "UDP 228.2.2.2:1053 #1907",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "udp-228-2-2-2-1053-1907-bkra"
+    },
+    {
+      "id": "bvfo",
+      "name": "UDP 228.2.2.2:1062 #2111",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-1062-2111-bvfo"
     },
     {
       "id": "brme",
@@ -732,12 +1204,84 @@
       "slug": "udp-228-2-2-2-1062-2111-brme"
     },
     {
+      "id": "bo7a",
+      "name": "UDP 228.2.2.2:1064 #2811",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-1064-2811-bo7a"
+    },
+    {
       "id": "baeg",
       "name": "UDP 228.2.2.2:1064 #2811",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "udp-228-2-2-2-1064-2811-baeg"
+    },
+    {
+      "id": "bx4b",
+      "name": "UDP 228.2.2.2:1071 #2203",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-1071-2203-bx4b"
+    },
+    {
+      "id": "bom1",
+      "name": "UDP 228.2.2.2:1071 #2203",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-1071-2203-bom1"
+    },
+    {
+      "id": "bdvo",
+      "name": "UDP 228.2.2.2:1073 #2221",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-1073-2221-bdvo"
+    },
+    {
+      "id": "bqqa",
+      "name": "UDP 228.2.2.2:1073 #2221",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-1073-2221-bqqa"
+    },
+    {
+      "id": "bpfk",
+      "name": "UDP 228.2.2.2:1077 #3219",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-1077-3219-bpfk"
+    },
+    {
+      "id": "bxaa",
+      "name": "UDP 228.2.2.2:1078 #2230",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-1078-2230-bxaa"
+    },
+    {
+      "id": "bc5b",
+      "name": "UDP 228.2.2.2:1078 #2230",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-1078-2230-bc5b"
+    },
+    {
+      "id": "bzjz",
+      "name": "UDP 228.2.2.2:1087 #2813",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-1087-2813-bzjz"
     },
     {
       "id": "bbtz",
@@ -748,12 +1292,28 @@
       "slug": "udp-228-2-2-2-1087-2813-bbtz"
     },
     {
+      "id": "bvjv",
+      "name": "UDP 228.2.2.2:1088 #2812",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-1088-2812-bvjv"
+    },
+    {
       "id": "bpwx",
       "name": "UDP 228.2.2.2:1088 #2812",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "udp-228-2-2-2-1088-2812-bpwx"
+    },
+    {
+      "id": "b837",
+      "name": "UDP 228.2.2.2:1094 #2817",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-1094-2817-b837"
     },
     {
       "id": "b4au",
@@ -764,12 +1324,60 @@
       "slug": "udp-228-2-2-2-1094-2817-b4au"
     },
     {
+      "id": "bqpd",
+      "name": "UDP 228.2.2.2:1101 #2248",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-1101-2248-bqpd"
+    },
+    {
+      "id": "bcg8",
+      "name": "UDP 228.2.2.2:1101 #2248",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-1101-2248-bcg8"
+    },
+    {
+      "id": "b1pj",
+      "name": "UDP 228.2.2.2:1103 #2113",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-1103-2113-b1pj"
+    },
+    {
       "id": "btpa",
       "name": "UDP 228.2.2.2:1103 #2113",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "udp-228-2-2-2-1103-2113-btpa"
+    },
+    {
+      "id": "b64g",
+      "name": "UDP 228.2.2.2:9999 #2235",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-9999-2235-b64g"
+    },
+    {
+      "id": "b76g",
+      "name": "UDP 228.2.2.2:9999 #2235",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "udp-228-2-2-2-9999-2235-b76g"
+    },
+    {
+      "id": "b2xt",
+      "name": "Unite8 SD1",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "unite8-sd1-b2xt"
     },
     {
       "id": "bhm5",
@@ -780,12 +1388,28 @@
       "slug": "unite8-sd1-bhm5"
     },
     {
+      "id": "bifa",
+      "name": "WWE 24*7",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "wwe-24-7-bifa"
+    },
+    {
       "id": "boan",
       "name": "WWE 24*7",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "wwe-24-7-boan"
+    },
+    {
+      "id": "b7a8",
+      "name": "Zee Bangla E",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "zee-bangla-e-b7a8"
     },
     {
       "id": "bl29",
@@ -796,12 +1420,36 @@
       "slug": "zee-bangla-e-bl29"
     },
     {
+      "id": "bcaa",
+      "name": "Zee Bangla HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "zee-bangla-hd-bcaa"
+    },
+    {
       "id": "byix",
       "name": "Zee Bangla HD",
       "group": "Network",
       "logo": "",
       "online": true,
       "slug": "zee-bangla-hd-byix"
+    },
+    {
+      "id": "bwx6",
+      "name": "Zee Cinema HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "zee-cinema-hd-bwx6"
+    },
+    {
+      "id": "bbei",
+      "name": "Zee Cinema HD",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "zee-cinema-hd-bbei"
     },
     {
       "id": "bo14",
@@ -812,6 +1460,14 @@
       "slug": "zee-cinema-hd-bo14"
     },
     {
+      "id": "b84n",
+      "name": "Zee TV",
+      "group": "Network",
+      "logo": "",
+      "online": true,
+      "slug": "zee-tv-b84n"
+    },
+    {
       "id": "bd11",
       "name": "Zee TV",
       "group": "Network",
@@ -820,140 +1476,12 @@
       "slug": "zee-tv-bd11"
     },
     {
-      "id": "bz7z",
-      "name": "Al Jazeera",
+      "id": "bkyl",
+      "name": "asiantvHD",
       "group": "Network",
       "logo": "",
       "online": false,
-      "slug": "al-jazeera-bz7z"
-    },
-    {
-      "id": "bjc1",
-      "name": "Animal Planet",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "animal-planet-bjc1"
-    },
-    {
-      "id": "b0wm",
-      "name": "BANGLA CINEMA",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "bangla-cinema-b0wm"
-    },
-    {
-      "id": "bw05",
-      "name": "BBC World",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "bbc-world-bw05"
-    },
-    {
-      "id": "bob4",
-      "name": "Bein Sport 1",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "bein-sport-1-bob4"
-    },
-    {
-      "id": "bui7",
-      "name": "Bein Sport 2",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "bein-sport-2-bui7"
-    },
-    {
-      "id": "bmm9",
-      "name": "Bein Xtra",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "bein-xtra-bmm9"
-    },
-    {
-      "id": "bcp0",
-      "name": "Cartoon Network",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "cartoon-network-bcp0"
-    },
-    {
-      "id": "bzmd",
-      "name": "CNN",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "cnn-bzmd"
-    },
-    {
-      "id": "bliq",
-      "name": "Colors Bangla HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "colors-bangla-hd-bliq"
-    },
-    {
-      "id": "b801",
-      "name": "Colors HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "colors-hd-b801"
-    },
-    {
-      "id": "bnjd",
-      "name": "Colors Infinity HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "colors-infinity-hd-bnjd"
-    },
-    {
-      "id": "bpbb",
-      "name": "Disney International",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "disney-international-bpbb"
-    },
-    {
-      "id": "bwnh",
-      "name": "Disney Jr",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "disney-jr-bwnh"
-    },
-    {
-      "id": "bi64",
-      "name": "ENC 2406",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "enc-2406-bi64"
-    },
-    {
-      "id": "boe4",
-      "name": "Enterr10 Bangla",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "enterr10-bangla-boe4"
-    },
-    {
-      "id": "bae0",
-      "name": "Eurosport",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "eurosport-bae0"
+      "slug": "asiantvhd-bkyl"
     },
     {
       "id": "bdfw",
@@ -964,412 +1492,12 @@
       "slug": "fifa-2026-unite8-2-sd-bdfw"
     },
     {
-      "id": "b37l",
-      "name": "HBO HD",
+      "id": "bv6p",
+      "name": "SA TV HD",
       "group": "Network",
       "logo": "",
       "online": false,
-      "slug": "hbo-hd-b37l"
-    },
-    {
-      "id": "bj4m",
-      "name": "History 18",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "history-18-bj4m"
-    },
-    {
-      "id": "b5wa",
-      "name": "Hits",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "hits-b5wa"
-    },
-    {
-      "id": "b9v0",
-      "name": "HITS MOVIES",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "hits-movies-b9v0"
-    },
-    {
-      "id": "bo00",
-      "name": "Hum Sitary",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "hum-sitary-bo00"
-    },
-    {
-      "id": "bzwf",
-      "name": "Jalsha Movies HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "jalsha-movies-hd-bzwf"
-    },
-    {
-      "id": "bd1k",
-      "name": "KSA Sport 1",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "ksa-sport-1-bd1k"
-    },
-    {
-      "id": "b3yb",
-      "name": "Movies Now HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "movies-now-hd-b3yb"
-    },
-    {
-      "id": "bmoe",
-      "name": "Nat Geo Wild HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "nat-geo-wild-hd-bmoe"
-    },
-    {
-      "id": "bxyc",
-      "name": "Nick",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "nick-bxyc"
-    },
-    {
-      "id": "buon",
-      "name": "Nickelodeon",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "nickelodeon-buon"
-    },
-    {
-      "id": "bse9",
-      "name": "Pogo",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "pogo-bse9"
-    },
-    {
-      "id": "bq5a",
-      "name": "PTV-SPORTS-HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "ptv-sports-hd-bq5a"
-    },
-    {
-      "id": "bebi",
-      "name": "Ruposhi Bangla",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "ruposhi-bangla-bebi"
-    },
-    {
-      "id": "b5js",
-      "name": "SKYNET SPORTS",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "skynet-sports-b5js"
-    },
-    {
-      "id": "bwki",
-      "name": "Sony Aath",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "sony-aath-bwki"
-    },
-    {
-      "id": "b18x",
-      "name": "Sony SET HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "sony-set-hd-b18x"
-    },
-    {
-      "id": "bz8n",
-      "name": "Sony Sports  Ten 1",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "sony-sports-ten-1-bz8n"
-    },
-    {
-      "id": "bbym",
-      "name": "Sony Sports 2",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "sony-sports-2-bbym"
-    },
-    {
-      "id": "bs0g",
-      "name": "SRK TV",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "srk-tv-bs0g"
-    },
-    {
-      "id": "b3j8",
-      "name": "Star Bangla",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "star-bangla-b3j8"
-    },
-    {
-      "id": "bfc4",
-      "name": "Star Gold 2 HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "star-gold-2-hd-bfc4"
-    },
-    {
-      "id": "brfa",
-      "name": "Star Jalsha",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "star-jalsha-brfa"
-    },
-    {
-      "id": "beu7",
-      "name": "Star Plus",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "star-plus-beu7"
-    },
-    {
-      "id": "bdwg",
-      "name": "STAR Plus HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "star-plus-hd-bdwg"
-    },
-    {
-      "id": "bqj2",
-      "name": "Star Sports 2 DL",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "star-sports-2-dl-bqj2"
-    },
-    {
-      "id": "b77z",
-      "name": "Star Sports Select 1 HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "star-sports-select-1-hd-b77z"
-    },
-    {
-      "id": "bi9k",
-      "name": "Star Sports Select 2 HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "star-sports-select-2-hd-bi9k"
-    },
-    {
-      "id": "bvv5",
-      "name": "Sun Bangla HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "sun-bangla-hd-bvv5"
-    },
-    {
-      "id": "bt92",
-      "name": "SUPER HIT",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "super-hit-bt92"
-    },
-    {
-      "id": "b22h",
-      "name": "TEN 3",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "ten-3-b22h"
-    },
-    {
-      "id": "b1au",
-      "name": "TEN 5 HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "ten-5-hd-b1au"
-    },
-    {
-      "id": "bfxw",
-      "name": "Ten Cricket",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "ten-cricket-bfxw"
-    },
-    {
-      "id": "buvm",
-      "name": "ThePapare 1",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "thepapare-1-buvm"
-    },
-    {
-      "id": "bksz",
-      "name": "ThePapare 2",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "thepapare-2-bksz"
-    },
-    {
-      "id": "b96j",
-      "name": "Travelxp HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "travelxp-hd-b96j"
-    },
-    {
-      "id": "b38z",
-      "name": "UDP 228.2.2.2:1053 #1907",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "udp-228-2-2-2-1053-1907-b38z"
-    },
-    {
-      "id": "bvfo",
-      "name": "UDP 228.2.2.2:1062 #2111",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "udp-228-2-2-2-1062-2111-bvfo"
-    },
-    {
-      "id": "bo7a",
-      "name": "UDP 228.2.2.2:1064 #2811",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "udp-228-2-2-2-1064-2811-bo7a"
-    },
-    {
-      "id": "bpfk",
-      "name": "UDP 228.2.2.2:1077 #3219",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "udp-228-2-2-2-1077-3219-bpfk"
-    },
-    {
-      "id": "bzjz",
-      "name": "UDP 228.2.2.2:1087 #2813",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "udp-228-2-2-2-1087-2813-bzjz"
-    },
-    {
-      "id": "bvjv",
-      "name": "UDP 228.2.2.2:1088 #2812",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "udp-228-2-2-2-1088-2812-bvjv"
-    },
-    {
-      "id": "b837",
-      "name": "UDP 228.2.2.2:1094 #2817",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "udp-228-2-2-2-1094-2817-b837"
-    },
-    {
-      "id": "b1pj",
-      "name": "UDP 228.2.2.2:1103 #2113",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "udp-228-2-2-2-1103-2113-b1pj"
-    },
-    {
-      "id": "b2xt",
-      "name": "Unite8 SD1",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "unite8-sd1-b2xt"
-    },
-    {
-      "id": "bifa",
-      "name": "WWE 24*7",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "wwe-24-7-bifa"
-    },
-    {
-      "id": "b7a8",
-      "name": "Zee Bangla E",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "zee-bangla-e-b7a8"
-    },
-    {
-      "id": "bcaa",
-      "name": "Zee Bangla HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "zee-bangla-hd-bcaa"
-    },
-    {
-      "id": "bwx6",
-      "name": "Zee Cinema HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "zee-cinema-hd-bwx6"
-    },
-    {
-      "id": "bbei",
-      "name": "Zee Cinema HD",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "zee-cinema-hd-bbei"
-    },
-    {
-      "id": "b84n",
-      "name": "Zee TV",
-      "group": "Network",
-      "logo": "",
-      "online": false,
-      "slug": "zee-tv-b84n"
+      "slug": "sa-tv-hd-bv6p"
     }
   ]
 }

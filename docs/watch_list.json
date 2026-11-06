@@ -1,14 +1,20 @@
 {
   "name": "EasyISP24 Stream",
   "version": "1.0.59",
-  "fetched_at": "2026-11-01T04:52:22Z",
+  "fetched_at": "2026-11-06T02:51:09Z",
   "stale": false,
-  "channel_count": 170,
-  "online_count": 101,
+  "channel_count": 186,
+  "online_count": 183,
   "channels": [
     {
       "id": "bsy8",
       "name": "0001_TSPORTS",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bz7z",
+      "name": "Al Jazeera",
       "group": "Network",
       "online": true
     },
@@ -25,14 +31,14 @@
       "online": true
     },
     {
-      "id": "bups",
+      "id": "bjc1",
       "name": "Animal Planet",
       "group": "Network",
       "online": true
     },
     {
-      "id": "bkyl",
-      "name": "asiantvHD",
+      "id": "bups",
+      "name": "Animal Planet",
       "group": "Network",
       "online": true
     },
@@ -45,6 +51,12 @@
     {
       "id": "bsmy",
       "name": "ATN News",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "b0wm",
+      "name": "BANGLA CINEMA",
       "group": "Network",
       "online": true
     },
@@ -67,8 +79,20 @@
       "online": true
     },
     {
+      "id": "bw05",
+      "name": "BBC World",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bw10",
       "name": "BBC World",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bob4",
+      "name": "Bein Sport 1",
       "group": "Network",
       "online": true
     },
@@ -79,8 +103,20 @@
       "online": true
     },
     {
+      "id": "bui7",
+      "name": "Bein Sport 2",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bl9s",
       "name": "Bein Sport 2",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bmm9",
+      "name": "Bein Xtra",
       "group": "Network",
       "online": true
     },
@@ -121,6 +157,12 @@
       "online": true
     },
     {
+      "id": "bcp0",
+      "name": "Cartoon Network",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "b7np",
       "name": "Cartoon Network",
       "group": "Network",
@@ -145,8 +187,20 @@
       "online": true
     },
     {
+      "id": "bzmd",
+      "name": "CNN",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "byhp",
       "name": "CNN",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bliq",
+      "name": "Colors Bangla HD",
       "group": "Network",
       "online": true
     },
@@ -157,8 +211,20 @@
       "online": true
     },
     {
+      "id": "b801",
+      "name": "Colors HD",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bkys",
       "name": "Colors HD",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bnjd",
+      "name": "Colors Infinity HD",
       "group": "Network",
       "online": true
     },
@@ -193,8 +259,26 @@
       "online": true
     },
     {
+      "id": "b7yb",
+      "name": "Discovery Science",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bpbb",
+      "name": "Disney International",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bbxp",
       "name": "Disney International",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bwnh",
+      "name": "Disney Jr",
       "group": "Network",
       "online": true
     },
@@ -223,14 +307,32 @@
       "online": true
     },
     {
+      "id": "bi64",
+      "name": "ENC 2406",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bonc",
       "name": "ENC 2406",
       "group": "Network",
       "online": true
     },
     {
+      "id": "boe4",
+      "name": "Enterr10 Bangla",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bxqa",
       "name": "Enterr10 Bangla",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bae0",
+      "name": "Eurosport",
       "group": "Network",
       "online": true
     },
@@ -242,6 +344,12 @@
     },
     {
       "id": "b4q7",
+      "name": "Eurosport HD",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "b0c3",
       "name": "Eurosport HD",
       "group": "Network",
       "online": true
@@ -259,8 +367,20 @@
       "online": true
     },
     {
+      "id": "b37l",
+      "name": "HBO HD",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bc4f",
       "name": "HBO HD",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bj4m",
+      "name": "History 18",
       "group": "Network",
       "online": true
     },
@@ -271,8 +391,20 @@
       "online": true
     },
     {
+      "id": "b5wa",
+      "name": "Hits",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bw4t",
       "name": "Hits",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "b9v0",
+      "name": "HITS MOVIES",
       "group": "Network",
       "online": true
     },
@@ -283,8 +415,20 @@
       "online": true
     },
     {
+      "id": "bo00",
+      "name": "Hum Sitary",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "b9zj",
       "name": "Hum Sitary",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bzwf",
+      "name": "Jalsha Movies HD",
       "group": "Network",
       "online": true
     },
@@ -297,6 +441,12 @@
     {
       "id": "b96k",
       "name": "Jamuna Television",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bd1k",
+      "name": "KSA Sport 1",
       "group": "Network",
       "online": true
     },
@@ -319,6 +469,12 @@
       "online": true
     },
     {
+      "id": "b3yb",
+      "name": "Movies Now HD",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bl8q",
       "name": "Movies Now HD",
       "group": "Network",
@@ -327,6 +483,12 @@
     {
       "id": "b3fg",
       "name": "MYTV HD",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bmoe",
+      "name": "Nat Geo Wild HD",
       "group": "Network",
       "online": true
     },
@@ -349,8 +511,20 @@
       "online": true
     },
     {
+      "id": "bxyc",
+      "name": "Nick",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "b010",
       "name": "Nick",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "buon",
+      "name": "Nickelodeon",
       "group": "Network",
       "online": true
     },
@@ -367,8 +541,20 @@
       "online": true
     },
     {
+      "id": "bse9",
+      "name": "Pogo",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bz5z",
       "name": "Pogo",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bq5a",
+      "name": "PTV-SPORTS-HD",
       "group": "Network",
       "online": true
     },
@@ -385,14 +571,14 @@
       "online": true
     },
     {
-      "id": "b5wy",
+      "id": "bebi",
       "name": "Ruposhi Bangla",
       "group": "Network",
       "online": true
     },
     {
-      "id": "bv6p",
-      "name": "SA TV HD",
+      "id": "b5wy",
+      "name": "Ruposhi Bangla",
       "group": "Network",
       "online": true
     },
@@ -403,8 +589,20 @@
       "online": true
     },
     {
+      "id": "b5js",
+      "name": "SKYNET SPORTS",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bm3w",
       "name": "SKYNET SPORTS",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bwki",
+      "name": "Sony Aath",
       "group": "Network",
       "online": true
     },
@@ -415,8 +613,20 @@
       "online": true
     },
     {
+      "id": "b18x",
+      "name": "Sony SET HD",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bvgy",
       "name": "Sony SET HD",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bz8n",
+      "name": "Sony Sports  Ten 1",
       "group": "Network",
       "online": true
     },
@@ -427,8 +637,20 @@
       "online": true
     },
     {
+      "id": "bbym",
+      "name": "Sony Sports 2",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bn59",
       "name": "Sony Sports 2",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bs0g",
+      "name": "SRK TV",
       "group": "Network",
       "online": true
     },
@@ -439,8 +661,20 @@
       "online": true
     },
     {
+      "id": "b3j8",
+      "name": "Star Bangla",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "biy1",
       "name": "Star Bangla",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bfc4",
+      "name": "Star Gold 2 HD",
       "group": "Network",
       "online": true
     },
@@ -451,8 +685,32 @@
       "online": true
     },
     {
+      "id": "btmz",
+      "name": "STAR GOLD HD - Rs 19.00",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bh2u",
+      "name": "STAR GOLD HD - Rs 19.00",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "brfa",
+      "name": "Star Jalsha",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bxvd",
       "name": "Star Jalsha",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "beu7",
+      "name": "Star Plus",
       "group": "Network",
       "online": true
     },
@@ -463,8 +721,32 @@
       "online": true
     },
     {
+      "id": "bdwg",
+      "name": "STAR Plus HD",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "b8d3",
       "name": "STAR Plus HD",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "brb2",
+      "name": "STar Spor 3",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "brdb",
+      "name": "STar Spor 3",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bqj2",
+      "name": "Star Sports 2 DL",
       "group": "Network",
       "online": true
     },
@@ -475,8 +757,20 @@
       "online": true
     },
     {
+      "id": "b77z",
+      "name": "Star Sports Select 1 HD",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bo3x",
       "name": "Star Sports Select 1 HD",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bi9k",
+      "name": "Star Sports Select 2 HD",
       "group": "Network",
       "online": true
     },
@@ -487,8 +781,20 @@
       "online": true
     },
     {
+      "id": "bvv5",
+      "name": "Sun Bangla HD",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "b539",
       "name": "Sun Bangla HD",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bt92",
+      "name": "SUPER HIT",
       "group": "Network",
       "online": true
     },
@@ -499,8 +805,20 @@
       "online": true
     },
     {
+      "id": "b22h",
+      "name": "TEN 3",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bwon",
       "name": "TEN 3",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "b1au",
+      "name": "TEN 5 HD",
       "group": "Network",
       "online": true
     },
@@ -511,8 +829,20 @@
       "online": true
     },
     {
+      "id": "bfxw",
+      "name": "Ten Cricket",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bqxt",
       "name": "Ten Cricket",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "buvm",
+      "name": "ThePapare 1",
       "group": "Network",
       "online": true
     },
@@ -523,8 +853,20 @@
       "online": true
     },
     {
+      "id": "bksz",
+      "name": "ThePapare 2",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bqg4",
       "name": "ThePapare 2",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "b96j",
+      "name": "Travelxp HD",
       "group": "Network",
       "online": true
     },
@@ -535,8 +877,20 @@
       "online": true
     },
     {
+      "id": "b38z",
+      "name": "UDP 228.2.2.2:1053 #1907",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bkra",
       "name": "UDP 228.2.2.2:1053 #1907",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bvfo",
+      "name": "UDP 228.2.2.2:1062 #2111",
       "group": "Network",
       "online": true
     },
@@ -547,8 +901,62 @@
       "online": true
     },
     {
+      "id": "bo7a",
+      "name": "UDP 228.2.2.2:1064 #2811",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "baeg",
       "name": "UDP 228.2.2.2:1064 #2811",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bx4b",
+      "name": "UDP 228.2.2.2:1071 #2203",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bom1",
+      "name": "UDP 228.2.2.2:1071 #2203",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bdvo",
+      "name": "UDP 228.2.2.2:1073 #2221",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bqqa",
+      "name": "UDP 228.2.2.2:1073 #2221",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bpfk",
+      "name": "UDP 228.2.2.2:1077 #3219",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bxaa",
+      "name": "UDP 228.2.2.2:1078 #2230",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bc5b",
+      "name": "UDP 228.2.2.2:1078 #2230",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bzjz",
+      "name": "UDP 228.2.2.2:1087 #2813",
       "group": "Network",
       "online": true
     },
@@ -559,8 +967,20 @@
       "online": true
     },
     {
+      "id": "bvjv",
+      "name": "UDP 228.2.2.2:1088 #2812",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bpwx",
       "name": "UDP 228.2.2.2:1088 #2812",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "b837",
+      "name": "UDP 228.2.2.2:1094 #2817",
       "group": "Network",
       "online": true
     },
@@ -571,8 +991,44 @@
       "online": true
     },
     {
+      "id": "bqpd",
+      "name": "UDP 228.2.2.2:1101 #2248",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bcg8",
+      "name": "UDP 228.2.2.2:1101 #2248",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "b1pj",
+      "name": "UDP 228.2.2.2:1103 #2113",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "btpa",
       "name": "UDP 228.2.2.2:1103 #2113",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "b64g",
+      "name": "UDP 228.2.2.2:9999 #2235",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "b76g",
+      "name": "UDP 228.2.2.2:9999 #2235",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "b2xt",
+      "name": "Unite8 SD1",
       "group": "Network",
       "online": true
     },
@@ -583,8 +1039,20 @@
       "online": true
     },
     {
+      "id": "bifa",
+      "name": "WWE 24*7",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "boan",
       "name": "WWE 24*7",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "b7a8",
+      "name": "Zee Bangla E",
       "group": "Network",
       "online": true
     },
@@ -595,8 +1063,26 @@
       "online": true
     },
     {
+      "id": "bcaa",
+      "name": "Zee Bangla HD",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "byix",
       "name": "Zee Bangla HD",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bwx6",
+      "name": "Zee Cinema HD",
+      "group": "Network",
+      "online": true
+    },
+    {
+      "id": "bbei",
+      "name": "Zee Cinema HD",
       "group": "Network",
       "online": true
     },
@@ -607,110 +1093,20 @@
       "online": true
     },
     {
+      "id": "b84n",
+      "name": "Zee TV",
+      "group": "Network",
+      "online": true
+    },
+    {
       "id": "bd11",
       "name": "Zee TV",
       "group": "Network",
       "online": true
     },
     {
-      "id": "bz7z",
-      "name": "Al Jazeera",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bjc1",
-      "name": "Animal Planet",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b0wm",
-      "name": "BANGLA CINEMA",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bw05",
-      "name": "BBC World",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bob4",
-      "name": "Bein Sport 1",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bui7",
-      "name": "Bein Sport 2",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bmm9",
-      "name": "Bein Xtra",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bcp0",
-      "name": "Cartoon Network",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bzmd",
-      "name": "CNN",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bliq",
-      "name": "Colors Bangla HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b801",
-      "name": "Colors HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bnjd",
-      "name": "Colors Infinity HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bpbb",
-      "name": "Disney International",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bwnh",
-      "name": "Disney Jr",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bi64",
-      "name": "ENC 2406",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "boe4",
-      "name": "Enterr10 Bangla",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bae0",
-      "name": "Eurosport",
+      "id": "bkyl",
+      "name": "asiantvHD",
       "group": "Network",
       "online": false
     },
@@ -721,308 +1117,8 @@
       "online": false
     },
     {
-      "id": "b37l",
-      "name": "HBO HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bj4m",
-      "name": "History 18",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b5wa",
-      "name": "Hits",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b9v0",
-      "name": "HITS MOVIES",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bo00",
-      "name": "Hum Sitary",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bzwf",
-      "name": "Jalsha Movies HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bd1k",
-      "name": "KSA Sport 1",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b3yb",
-      "name": "Movies Now HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bmoe",
-      "name": "Nat Geo Wild HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bxyc",
-      "name": "Nick",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "buon",
-      "name": "Nickelodeon",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bse9",
-      "name": "Pogo",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bq5a",
-      "name": "PTV-SPORTS-HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bebi",
-      "name": "Ruposhi Bangla",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b5js",
-      "name": "SKYNET SPORTS",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bwki",
-      "name": "Sony Aath",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b18x",
-      "name": "Sony SET HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bz8n",
-      "name": "Sony Sports  Ten 1",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bbym",
-      "name": "Sony Sports 2",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bs0g",
-      "name": "SRK TV",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b3j8",
-      "name": "Star Bangla",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bfc4",
-      "name": "Star Gold 2 HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "brfa",
-      "name": "Star Jalsha",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "beu7",
-      "name": "Star Plus",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bdwg",
-      "name": "STAR Plus HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bqj2",
-      "name": "Star Sports 2 DL",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b77z",
-      "name": "Star Sports Select 1 HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bi9k",
-      "name": "Star Sports Select 2 HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bvv5",
-      "name": "Sun Bangla HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bt92",
-      "name": "SUPER HIT",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b22h",
-      "name": "TEN 3",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b1au",
-      "name": "TEN 5 HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bfxw",
-      "name": "Ten Cricket",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "buvm",
-      "name": "ThePapare 1",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bksz",
-      "name": "ThePapare 2",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b96j",
-      "name": "Travelxp HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b38z",
-      "name": "UDP 228.2.2.2:1053 #1907",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bvfo",
-      "name": "UDP 228.2.2.2:1062 #2111",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bo7a",
-      "name": "UDP 228.2.2.2:1064 #2811",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bpfk",
-      "name": "UDP 228.2.2.2:1077 #3219",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bzjz",
-      "name": "UDP 228.2.2.2:1087 #2813",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bvjv",
-      "name": "UDP 228.2.2.2:1088 #2812",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b837",
-      "name": "UDP 228.2.2.2:1094 #2817",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b1pj",
-      "name": "UDP 228.2.2.2:1103 #2113",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b2xt",
-      "name": "Unite8 SD1",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bifa",
-      "name": "WWE 24*7",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b7a8",
-      "name": "Zee Bangla E",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bcaa",
-      "name": "Zee Bangla HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bwx6",
-      "name": "Zee Cinema HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "bbei",
-      "name": "Zee Cinema HD",
-      "group": "Network",
-      "online": false
-    },
-    {
-      "id": "b84n",
-      "name": "Zee TV",
+      "id": "bv6p",
+      "name": "SA TV HD",
       "group": "Network",
       "online": false
     }
